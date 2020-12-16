@@ -81,7 +81,11 @@ public class RicercaID {
 	public double GetLatitudine() {
 		return lat;
 	}
+<<<<<<< HEAD
 
 
+=======
+	
+>>>>>>> refs/heads/Commento_Tolto
 
 }
