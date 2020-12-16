@@ -82,10 +82,5 @@ public class RicercaID {
 		return lat;
 	}
 
-	
-	
-	//modifiche
-	
-	
 
 }
