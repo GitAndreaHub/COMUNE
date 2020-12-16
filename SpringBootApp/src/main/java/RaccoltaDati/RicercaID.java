@@ -81,4 +81,7 @@ public class RicercaID {
 	public double GetLatitudine() {
 		return lat;
 	}
+
+
+
 }
