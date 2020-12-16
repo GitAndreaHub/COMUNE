@@ -82,5 +82,5 @@ public class RicercaID {
 		return lat;
 	}
 	
-//Brench in prova1_brench
+
 }
