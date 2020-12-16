@@ -81,6 +81,6 @@ public class RicercaID {
 	public double GetLatitudine() {
 		return lat;
 	}
-	//MANNAGGIA A QUEL PORCO
+	//CENSORED
 
 }
