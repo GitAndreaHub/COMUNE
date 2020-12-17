@@ -18,11 +18,5 @@ public class Media {
 		media=somma/lunghezza;
 		return media;
 	}
-	
-
-	//getter
-	public double GetMedia() {
-		return media;
-	}
 
 }
