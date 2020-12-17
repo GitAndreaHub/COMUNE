@@ -8,12 +8,67 @@ import java.net.URL;
 
 import javax.net.ssl.HttpsURLConnection;
 
+import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
 
 public class ChiamataAPI_Weekly {
 	
+	RicercaID ricerca = new RicercaID();
+	Time_Unix Time = new Time_Unix();
 	
+	private int CurrentTimeUnix;
+	private int id;
+	private double lon;
+	private double lat;
+	
+	public ChiamataAPI_Weekly() {
+		
+	}
+	
+	public void Chiamata_Weekly() {
+		
+		JSONParser parser = new JSONParser();
+		
+		try {
+			
+			CurrentTimeUnix = Time.Get_TimeUnix();
+			//id = ricerca.GetId();
+			lat = ricerca.GetLatitudine();
+			lon = ricerca.GetLongitudine();		
+		
+			URL oracle = new URL("https://api.openweathermap.org/data/2.5/onecall/timemachine?lat=" + lat + "&lon=" + lon + "&dt=" + CurrentTimeUnix + "&appid=225a3d7ea81634ed4bb00b4cb10f4397");
+		
+			HttpsURLConnection link = (HttpsURLConnection) oracle.openConnection();
+			link.addRequestProperty("User-Agent", "Mozilla/5.0 (Windows NT 6.1; WOW64; rv:25.0) Gecko/20100101 Firefox/25.0");
+		
+			BufferedReader input = new BufferedReader(new InputStreamReader(link.getInputStream()));
+		
+			String inputLine;
+			while((inputLine = input.readLine()) != null) {
+			
+				JSONObject TotalObject = (JSONObject) parser.parse(inputLine);
+				
+			
+				JSONArray Hourly = (JSONArray) TotalObject.get("hourly");
+			
+				for(Object o : Hourly) {
+					
+					JSONObject H = (JSONObject) o;
+					Double temp = (Double) H.get("temp");
+				}
+			
+			}
+		
+		 } catch (FileNotFoundException e) {
+	            e.printStackTrace();
+	     } catch (IOException e) {
+	            e.printStackTrace();
+	     } catch (ParseException e) {
+	            e.printStackTrace();
+	     }  
+		
+	}
 	
 }
