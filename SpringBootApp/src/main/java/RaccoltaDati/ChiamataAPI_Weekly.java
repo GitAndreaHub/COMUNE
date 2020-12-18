@@ -20,7 +20,6 @@ public class ChiamataAPI_Weekly {
 	Time_Unix Time = new Time_Unix();
 	
 	private int CurrentTimeUnix;
-	private int id;
 	private double lon;
 	private double lat;
 	

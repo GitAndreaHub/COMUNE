@@ -5,10 +5,8 @@ import java.util.Scanner;
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
 
-import org.json.simple.JSONArray;
+
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
@@ -20,7 +18,6 @@ public class RicercaID {
 	private int id;
 	private double lon;
 	private double lat;
-	private String nome;
 	
 
 //costruttore	
@@ -60,9 +57,7 @@ public class RicercaID {
 		} catch(FileNotFoundException e) {
 			System.out.println("Errore lettura file JSON");
 			System.out.println(e);
-		} catch (IOException e) {
-            e.printStackTrace();
-        } catch (ParseException e) {
+		}  catch (ParseException e) {
             e.printStackTrace();
         }
 		
