@@ -29,7 +29,7 @@ public class ChiamataAPI_Actualy{
 		
 	}
 	
-	public void Chiamata() {
+	public void Chiamata(String nome) {
 		
 	
 		JSONParser parser = new JSONParser();
