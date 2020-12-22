@@ -22,6 +22,11 @@ public class Ricerca_WeeklyTemp {
 	public Ricerca_WeeklyTemp() {
 		
 	}
+	/**
+	 * 
+	 * @param nome
+	 * @return
+	 */
 	
 	public Vector<Double> WeeklyTemp(String nome) {
 		
