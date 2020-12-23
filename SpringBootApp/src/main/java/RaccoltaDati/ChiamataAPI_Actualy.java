@@ -27,6 +27,7 @@ public class ChiamataAPI_Actualy{
 //costruttore	
 	public ChiamataAPI_Actualy() {
 		
+		
 	}
 	
 	public void Chiamata(String nome) {
