@@ -1,6 +1,7 @@
 package RaccoltaDati;
 
 import java.io.BufferedReader;
+
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -21,6 +22,10 @@ public class ChiamataAPI_Actualy{
 	private double temp_min;
 	private double temp_max;
 	private double tempo;
+	
+	private Long tempoLong;
+	private Long temp_maxLong;
+	private Long temp_minLong;
 	
 	RicercaID dati = new RicercaID();
 	
@@ -54,9 +59,24 @@ public class ChiamataAPI_Actualy{
 			
 				JSONObject temp = (JSONObject) citta.get("main");
 			
-				tempo = (double) temp.get("temp");
-				temp_max = (double) temp.get("temp_max");
-				temp_min = (double) temp.get("temp_min");
+				if(temp.get("temp") instanceof Double) tempo = (double) temp.get("temp");
+				else {
+					tempoLong = (Long) temp.get("temp"); 
+					tempo = tempoLong.doubleValue();
+				}
+				
+				if(temp.get("temp_max") instanceof Double) temp_max = (double) temp.get("temp_max");
+				else {
+					temp_maxLong = (Long) temp.get("temp_max"); 
+					temp_max = temp_maxLong.doubleValue();
+				}
+				
+				if(temp.get("temp_min") instanceof Double) temp_min = (double) temp.get("temp_min");
+				else {
+					temp_minLong = (Long) temp.get("temp_min");
+					temp_min = temp_minLong.doubleValue();
+				}
+				
 			
 			}
 		

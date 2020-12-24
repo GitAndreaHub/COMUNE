@@ -18,6 +18,8 @@ public class Ricerca_WeeklyTemp {
 	
 	Vector<Double> temp = new Vector<Double>();
 	
+	private Long Temp;
+	
 //Costruttore	
 	public Ricerca_WeeklyTemp() {
 		
@@ -42,7 +44,13 @@ public class Ricerca_WeeklyTemp {
 					
 					int conta = 1;
 					for(int i=0; i < 5; i++) {
-						temp.set(i, (Double)citta.get("temp" + conta));
+						
+					    if(citta.get("temp" + conta) instanceof Double) temp.set(i, (Double)citta.get("temp" + conta));
+					    else {
+					    	Temp = (Long) citta.get("temp" + conta); 
+					    	temp.set(i, Temp.doubleValue()); 
+					    }
+						Temp = null;
 						conta++;
 					}
 					

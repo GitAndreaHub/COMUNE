@@ -16,8 +16,8 @@ public class RicercaID {
 	JSONParser parser = new JSONParser();
 	
 	private int id;
-	private double lon;
-	private double lat;
+	//private double lon;
+	//private double lat;
 	
 
 //costruttore	
@@ -49,8 +49,8 @@ public class RicercaID {
 				//JSONObject id = (JSONObject) nome.get("id");
 				
 				id = (int) name.get("id");
-				lon = (double) name.get("lon");
-				lat = (double) name.get("lat"); 
+				//lon = (double) name.get("lon");
+				//lat = (double) name.get("lat"); 
 					
 			}
 			
@@ -68,7 +68,8 @@ public class RicercaID {
 	public int GetId() {
 		return id;
 	}
-	
+
+/*	
 	public double GetLongitudine() {
 		return lon;
 	}
@@ -76,6 +77,6 @@ public class RicercaID {
 	public double GetLatitudine() {
 		return lat;
 	}
-
+*/
 
 }
