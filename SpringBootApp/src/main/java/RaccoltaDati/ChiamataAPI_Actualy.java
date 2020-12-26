@@ -17,7 +17,6 @@ import org.json.simple.parser.ParseException;
 public class ChiamataAPI_Actualy{
 	
 	private int id;
-	private String nome;
 	
 	private double temp_min;
 	private double temp_max;
@@ -42,8 +41,7 @@ public class ChiamataAPI_Actualy{
 	
 		try {
 		
-			dati.lettura(nome);
-			id = dati.GetId();
+			id = dati.lettura(nome);
 		
 			URL oracle = new URL("api.openweathermap.org/data/2.5/weather?id=" + id + "&appid=225a3d7ea81634ed4bb00b4cb10f4397");
 		
@@ -100,7 +98,6 @@ public class ChiamataAPI_Actualy{
 	public double GetTemp_min() {
 		return temp_min;
 	}
-}	
-//merge Brench1	
+}
 
 
