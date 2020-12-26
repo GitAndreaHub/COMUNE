@@ -28,22 +28,18 @@ public class RicercaID {
 		
 		try {
 			
-			//BufferedReader reader = new BufferedReader (new FileReader ("CityId.json"));
+			
 			Scanner input = new Scanner(new BufferedReader(new FileReader("CityId.json")));
 			
-			//Object obj = parser.parse(new FileReader("CityId.json"));
-			//BufferedReader file_input = new BufferedReader(new InputStreamReader(null,"CityId.json"));
 			
 			String stringa = null;
 			while( (input.hasNext())) {
 				
 				JSONObject citta = (JSONObject) parser.parse(stringa);
 				
-				//JSONObject Name = name;
 				
 				JSONObject name= (JSONObject) citta.get(nome);
 				
-				//JSONObject id = (JSONObject) nome.get("id");
 				
 				id = (int) name.get("id");
 					
