@@ -9,7 +9,7 @@ public class Media {
 	}
 	
 	//setter
-	public double MediaNumeri(Vector<Integer>v1){
+	public double MediaNumeri(Vector<Double>v1){
 		int lunghezza= v1.size();
 		int somma=0;
 		for(int i=0;i<lunghezza; i++) {

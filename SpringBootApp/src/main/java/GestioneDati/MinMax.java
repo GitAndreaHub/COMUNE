@@ -9,7 +9,7 @@ public class MinMax {
 	}
 	
 	//setter
-	public void CalcolaMinMax(Vector<Integer>v1) {
+	public void CalcolaMinMax(Vector<Double>v1) {
 		int lunghezza= v1.size();
 		Min=v1.get(0);
 		Max=v1.get(0);
