@@ -3,6 +3,7 @@ import java.util.Vector;
 
 public class MinMax {
 	private double Min,Max;
+	private int PosMin, PosMax;
 	
 	public MinMax() {
 		
@@ -14,8 +15,14 @@ public class MinMax {
 		Min=v1.get(0);
 		Max=v1.get(0);
 		for(int i=0; i<lunghezza; i++) {
-			if(v1.get(i)<Min) Min=v1.get(i);
-			if(v1.get(i)>Max) Max=v1.get(i);
+			if(v1.get(i)<Min) {
+				Min=v1.get(i);
+				PosMin=i;
+			}
+			if(v1.get(i)>Max) {
+				Max=v1.get(i);
+				PosMax=i;
+			}
 		}
 	}
 	
@@ -27,5 +34,14 @@ public class MinMax {
 	public double GetMax() {
 		return Max;
 	}
+	
+	public int GetPosMax() {
+		return PosMax;
+	}
+	
+	public int GetPosMin() {
+		return PosMin;
+	}
+	
 
 }

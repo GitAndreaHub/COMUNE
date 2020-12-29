@@ -15,6 +15,8 @@ public class Range_AllCity {
 	Vector<Double> VettoreMassimi = new Vector<Double>();
 	Vector<Double> VettoreVarianze = new Vector<Double>();
 	
+	private int PosizioneMin, PosizioneMax, PosMassimaVarianza;
+	
 //Costruttore	
 	public Range_AllCity() {
 		
@@ -104,7 +106,9 @@ public class Range_AllCity {
 			VettoreMinimi.set(u, VettoreDati.get(i));
 		}
 		
+		
 		minmax.CalcolaMinMax(VettoreMinimi);
+		PosizioneMin=minmax.GetPosMin();
 		return minmax.GetMin();
 	}
 	
@@ -116,6 +120,7 @@ public class Range_AllCity {
 		}
 		
 		minmax.CalcolaMinMax(VettoreMinimi);
+		PosizioneMax=minmax.GetPosMax();
 		return minmax.GetMax();
 	}
 	
@@ -127,7 +132,20 @@ public class Range_AllCity {
 		}
 		
 		minmax.CalcolaMinMax(VettoreVarianze);
+		PosMassimaVarianza=minmax.GetPosMax();
 		return minmax.GetMax();
+	}
+	
+	public int GetPosMin() {
+		return PosizioneMin;
+	}
+	
+	public int GetPosMax() {
+		return PosizioneMax;
+	}
+	
+	public int GetPosMaxVar() {
+		return PosMassimaVarianza;
 	}
 
 }
