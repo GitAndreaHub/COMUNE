@@ -1,0 +1,32 @@
+{
+  "Ancona" : {
+    "Id" : 3183089
+  },
+  "Pesaro" : {
+    "Id" : 3171173
+  },
+  "Fano" : {
+    "Id" : 3177219
+  },
+  "Ascoli Piceno" : {
+    "Id" : 3182749
+  },
+  "San Benedetto del Tronto" : {
+    "Id" : 3168550
+  },
+  "Senigallia" : {
+    "Id" : 3166740
+  },
+  "Civitanova Marche" : {
+    "Id" : 3170102
+  },
+  "Macerata" : {
+    "Id" : 3174380
+  },
+  "Jesi" : {
+    "Id" : 3175628
+  },
+  "Fermo" : {
+    "Id" : 3177099
+  }
+}

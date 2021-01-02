@@ -29,7 +29,7 @@ public class RicercaID {
 		try {
 			
 			
-			Scanner input = new Scanner(new BufferedReader(new FileReader("CityId.json")));
+			Scanner input = new Scanner(new BufferedReader(new FileReader("CityIdJSON.json")));
 			
 			
 			String stringa = null;
@@ -41,7 +41,7 @@ public class RicercaID {
 				JSONObject name= (JSONObject) citta.get(nome);
 				
 				
-				id = (int) name.get("id");
+				id = (int) name.get("Id"); 
 					
 			}
 			
