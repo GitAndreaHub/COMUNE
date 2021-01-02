@@ -12,11 +12,11 @@ import RaccoltaDati.ChiamataAPI_Actualy;
 public class SimpleRestController {
 	
 	@GetMapping("/actualy")
-    public double SinlgeCity(@RequestParam(name = "city", defaultValue = "Nessuna_Citta")String city) {
+    public ChiamataAPI_Actualy SinlgeCity(@RequestParam(name = "city", defaultValue = "Nessuna_Citta")String nome) {
 		
 		ChiamataAPI_Actualy actualy = new ChiamataAPI_Actualy();
-		actualy.Chiamata(city);
-		return actualy.GetTempo();
+		actualy.Chiamata(nome);
+		return actualy;
 		
-}
+	}
 }

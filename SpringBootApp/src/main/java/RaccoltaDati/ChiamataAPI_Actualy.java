@@ -14,7 +14,11 @@ import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
 
+import java.util.Scanner;
+
 public class ChiamataAPI_Actualy{
+	
+	Scanner input = new Scanner(System.in);
 	
 	private int id;
 	
@@ -44,6 +48,7 @@ public class ChiamataAPI_Actualy{
 		try {
 		
 			id = dati.lettura(nome);
+			System.out.println(id);
 		
 			URL oracle = new URL("api.openweathermap.org/data/2.5/weather?id=" + id + "&appid=225a3d7ea81634ed4bb00b4cb10f4397");
 		
@@ -94,6 +99,7 @@ public class ChiamataAPI_Actualy{
 	}
 	
 	public double GetTempo() {
+		System.out.println(tempo);
 		return tempo;
 	}
 	
