@@ -2,10 +2,10 @@ package RaccoltaDati;
 import java.util.Scanner;
 
 
-import java.io.BufferedReader;
+//import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
-
+import java.io.IOException;
 
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
@@ -15,7 +15,7 @@ public class RicercaID {
 	Scanner input = new Scanner(System.in);
 	JSONParser parser = new JSONParser();
 	
-	private int id;
+	private int Id;
 
 //costruttore	
 	public RicercaID() {
@@ -29,19 +29,26 @@ public class RicercaID {
 		try {
 			
 			
-			Scanner input = new Scanner(new BufferedReader(new FileReader("CityIdJSON.json")));
+			//Scanner input = new Scanner(new BufferedReader(new FileReader("CityIdJSON.json")));
+			JSONObject obj = (JSONObject) parser.parse(new FileReader("CityIdJSON.json"));
 			
-			
-			String stringa = null;
+			//String stringa = null;
 			while( (input.hasNext())) {
 				
-				JSONObject citta = (JSONObject) parser.parse(stringa);
 				
+				JSONObject citta = (JSONObject) obj.get(nome);
+				//JSONObject citta = (JSONObject) Jobj.get(nome);
+				
+				
+				Id = (int) citta.get("Id");
+				
+				System.out.println(Id);
+				
+				/*JSONObject citta = (JSONObject) parser.parse(stringa);
 				
 				JSONObject name= (JSONObject) citta.get(nome);
 				
-				
-				id = (int) name.get("Id"); 
+				id = (int) name.get("Id"); */
 					
 			}
 			
@@ -50,9 +57,11 @@ public class RicercaID {
 			System.out.println(e);
 		}  catch (ParseException e) {
             e.printStackTrace();
+        } catch (IOException e) {
+        	
         }
 		
-		return id;
+		return Id;
 		
 	}
 	

@@ -20,7 +20,7 @@ public class ChiamataAPI_Actualy{
 	
 	Scanner input = new Scanner(System.in);
 	
-	private int id;
+	private int Id;
 	
 	private double temp_min;
 	private double temp_max;
@@ -43,14 +43,13 @@ public class ChiamataAPI_Actualy{
 	
 		JSONParser parser = new JSONParser();
 		
-		JSONObject temp = null;
 	
 		try {
 		
-			id = dati.lettura(nome);
-			System.out.println(id);
+			Id = dati.lettura(nome);
+			System.out.println(Id);
 		
-			URL oracle = new URL("api.openweathermap.org/data/2.5/weather?id=" + id + "&appid=225a3d7ea81634ed4bb00b4cb10f4397");
+			URL oracle = new URL("api.openweathermap.org/data/2.5/weather?id=" + Id + "&appid=225a3d7ea81634ed4bb00b4cb10f4397");
 		
 			HttpsURLConnection link = (HttpsURLConnection) oracle.openConnection();
 			link.addRequestProperty("User-Agent", "Mozilla/5.0 (Windows NT 6.1; WOW64; rv:25.0) Gecko/20100101 Firefox/25.0");
@@ -63,7 +62,7 @@ public class ChiamataAPI_Actualy{
 			
 				JSONObject citta = (JSONObject) parser.parse(inputLine);
 			
-				temp = (JSONObject) citta.get("main");
+				JSONObject temp = (JSONObject) citta.get("main");
 			
 				if(temp.get("temp") instanceof Double) tempo = (double) temp.get("temp");
 				else {
