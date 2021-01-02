@@ -95,8 +95,9 @@ public class Range_AllCity {
 			VettoreMedie.set(u, VettoreDati.get(i));
 			u++;
 		}
+		media.OpsuVett(VettoreMedie);
 		
-		return media.MediaNumeri(VettoreMedie);
+		return media.GetMedia();
 	}
 	
 	public double Minimi() {
@@ -107,7 +108,7 @@ public class Range_AllCity {
 		}
 		
 		
-		minmax.CalcolaMinMax(VettoreMinimi);
+		minmax.OpsuVett(VettoreMinimi);
 		PosizioneMin=minmax.GetPosMin();
 		return minmax.GetMin();
 	}
@@ -119,7 +120,7 @@ public class Range_AllCity {
 			VettoreMassimi.set(u, VettoreDati.get(i));
 		}
 		
-		minmax.CalcolaMinMax(VettoreMinimi);
+		minmax.OpsuVett(VettoreMinimi);
 		PosizioneMax=minmax.GetPosMax();
 		return minmax.GetMax();
 	}
@@ -131,7 +132,7 @@ public class Range_AllCity {
 			VettoreVarianze.set(u, VettoreDati.get(i));
 		}
 		
-		minmax.CalcolaMinMax(VettoreVarianze);
+		minmax.OpsuVett(VettoreVarianze);
 		PosMassimaVarianza=minmax.GetPosMax();
 		return minmax.GetMax();
 	}

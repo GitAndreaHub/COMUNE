@@ -33,8 +33,9 @@ public class RangePersonalizzabile {
 			temperaturefinali.set(conta, temperature.get(i));
 			conta++;
 		}
-		Media=metodomedia.MediaNumeri(temperaturefinali);
-		metodominmax.CalcolaMinMax(temperaturefinali);
+		metodomedia.OpsuVett(temperaturefinali);
+		Media=metodomedia.GetMedia();
+		metodominmax.OpsuVett(temperaturefinali);
 		Max=metodominmax.GetMax();
 		Min=metodominmax.GetMin();
 		Varianza=metodovarianza.CalcoloVarianza(Min, Max);
