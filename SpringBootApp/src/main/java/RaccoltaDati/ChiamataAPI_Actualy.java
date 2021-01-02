@@ -38,6 +38,8 @@ public class ChiamataAPI_Actualy{
 		
 	
 		JSONParser parser = new JSONParser();
+		
+		JSONObject temp = null;
 	
 		try {
 		
@@ -50,12 +52,13 @@ public class ChiamataAPI_Actualy{
 		
 			BufferedReader input = new BufferedReader(new InputStreamReader(link.getInputStream()));
 		
+			//JSONObject temp = null;
 			String inputLine;
 			while((inputLine = input.readLine()) != null) {
 			
 				JSONObject citta = (JSONObject) parser.parse(inputLine);
 			
-				JSONObject temp = (JSONObject) citta.get("main");
+				temp = (JSONObject) citta.get("main");
 			
 				if(temp.get("temp") instanceof Double) tempo = (double) temp.get("temp");
 				else {
@@ -77,6 +80,8 @@ public class ChiamataAPI_Actualy{
 				
 			
 			}
+			
+			
 		
 		 } catch (FileNotFoundException e) {
 	            e.printStackTrace();
@@ -84,7 +89,8 @@ public class ChiamataAPI_Actualy{
 	            e.printStackTrace();
 	     } catch (ParseException e) {
 	            e.printStackTrace();
-	     }  
+	     }
+		 
 	}
 	
 	public double GetTempo() {

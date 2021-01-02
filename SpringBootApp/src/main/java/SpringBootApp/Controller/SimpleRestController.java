@@ -6,19 +6,17 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import RaccoltaDati.ChiamataAPI_Actualy;
+
 @RestController
 public class SimpleRestController {
 	
-	@GetMapping("/Main")
-	public Main Actualy1(@RequestParam(name = "citta", defaultValue = "default") String nome) {
+	@GetMapping("/actualy")
+    public double SinlgeCity(@RequestParam(name = "city", defaultValue = "Nessuna_Citta")String city) {
 		
-		return new Main("Jesi");
-	}
-	
-	@PostMapping("/Assegno")
-	public Main Actualy2(@RequestBody Main body) {
+		ChiamataAPI_Actualy actualy = new ChiamataAPI_Actualy();
+		actualy.Chiamata(city);
+		return actualy.GetTempo();
 		
-		return body;
-	}
-
+}
 }

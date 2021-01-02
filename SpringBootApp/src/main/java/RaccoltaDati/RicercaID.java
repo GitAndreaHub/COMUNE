@@ -29,7 +29,7 @@ public class RicercaID {
 		try {
 			
 			
-			Scanner input = new Scanner(new BufferedReader(new FileReader("CityId.json")));
+			Scanner input = new Scanner(new BufferedReader(new FileReader("/Users/utente/git/repository/SpringBootApp/src/main/java/CityId.json")));
 			
 			
 			String stringa = null;
