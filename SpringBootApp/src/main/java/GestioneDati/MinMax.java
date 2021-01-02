@@ -1,7 +1,7 @@
 package GestioneDati;
 import java.util.Vector;
 
-public class MinMax {
+public class MinMax implements OperazionisuVett{
 	private double Min,Max;
 	private int PosMin, PosMax;
 	
@@ -10,7 +10,7 @@ public class MinMax {
 	}
 	
 	//setter
-	public void CalcolaMinMax(Vector<Double>v1) {
+	public void OpsuVett(Vector<Double>v1) {
 		int lunghezza= v1.size();
 		Min=v1.get(0);
 		Max=v1.get(0);
