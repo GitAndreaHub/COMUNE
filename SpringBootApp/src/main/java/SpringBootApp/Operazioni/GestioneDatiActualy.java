@@ -1,5 +1,8 @@
 package SpringBootApp.Operazioni;
 import RaccoltaDati.ChiamataAPI_Actualy;
+
+import java.util.Vector;
+
 import GestioneDati.Varianza;
 
 public class GestioneDatiActualy {
@@ -8,6 +11,7 @@ public class GestioneDatiActualy {
 	private double Min;
 	private double Max;
 	private double Varianza;
+	Vector<Double> appoggio=new Vector<Double>();
 	
 	
 	//costruttore
@@ -20,12 +24,13 @@ public class GestioneDatiActualy {
 	
 	//setter
 	public void TemperaturaCorrente(String Nome) {
-		ChiamataAPI_Actualy chiamata= new ChiamataAPI_Actualy();
+		ChiamataAPI_Actualy chiamata= new ChiamataAPI_Actualy(null);
 		Varianza Var= new Varianza();
-		chiamata.Chiamata(Nome);
-		Temp=chiamata.GetTempo();
-		Min=chiamata.GetTemp_min();
-		Max=chiamata.GetTemp_max();
+		chiamata.RaccoltaTemperature(Nome);
+		appoggio=chiamata.GetDati();
+		Temp=appoggio.get(0);
+		Min=appoggio.get(1);
+		Max=appoggio.get(2);
 		Varianza=Var.CalcoloVarianza(Min, Max);
 	}
 	

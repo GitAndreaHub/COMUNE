@@ -12,7 +12,7 @@ import org.json.simple.parser.ParseException;
 
 import java.util.Vector;
 
-public class Ricerca_WeeklyTemp {
+public class Ricerca_WeeklyTemp extends RaccoltaDati {
 	Scanner input = new Scanner(System.in);
 	JSONParser parser = new JSONParser();
 	
@@ -21,8 +21,8 @@ public class Ricerca_WeeklyTemp {
 	private Long Temp;
 	
 //Costruttore	
-	public Ricerca_WeeklyTemp() {
-		
+	public Ricerca_WeeklyTemp(Vector<Double> Dati) {
+		super(Dati);
 	}
 	/**
 	 * 
@@ -30,7 +30,7 @@ public class Ricerca_WeeklyTemp {
 	 * @return
 	 */
 	
-	public Vector<Double> WeeklyTemp(String nome) {
+	public void RaccoltaTemperature(String nome) {
 		
 		try {
 			
@@ -62,8 +62,6 @@ public class Ricerca_WeeklyTemp {
 		} catch (ParseException e) {
            e.printStackTrace();
         }
-		
-		return temp;
 	}
 
 }

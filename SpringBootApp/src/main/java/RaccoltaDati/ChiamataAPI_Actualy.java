@@ -15,8 +15,9 @@ import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
 
 import java.util.Scanner;
+import java.util.Vector;
 
-public class ChiamataAPI_Actualy{
+public class ChiamataAPI_Actualy extends RaccoltaDati{
 	
 	Scanner input = new Scanner(System.in);
 	
@@ -30,15 +31,15 @@ public class ChiamataAPI_Actualy{
 	private Long temp_maxLong;
 	private Long temp_minLong;
 	
-	RicercaID dati = new RicercaID();
+	RicercaID ID = new RicercaID();
+	Vector<Double> dati = new Vector<Double>();
 	
 //costruttore	
-	public ChiamataAPI_Actualy() {
-		
-		
+	public ChiamataAPI_Actualy(Vector<Double> Dati) {
+		super(Dati);
 	}
 	
-	public void Chiamata(String nome) {
+	public void RaccoltaTemperature(String nome) {
 		
 	
 		JSONParser parser = new JSONParser();
@@ -46,7 +47,7 @@ public class ChiamataAPI_Actualy{
 	
 		try {
 		
-			Id = dati.lettura(nome);
+			Id = ID.lettura(nome);
 			System.out.println(Id);
 		
 			URL oracle = new URL("api.openweathermap.org/data/2.5/weather?id=" + Id + "&appid=225a3d7ea81634ed4bb00b4cb10f4397");
@@ -85,6 +86,9 @@ public class ChiamataAPI_Actualy{
 			
 			}
 			
+			dati.set(0, tempo);
+			dati.set(1, temp_max);
+			dati.set(2, temp_min);
 			
 		
 		 } catch (FileNotFoundException e) {
@@ -97,18 +101,6 @@ public class ChiamataAPI_Actualy{
 		 
 	}
 	
-	public double GetTempo() {
-		System.out.println(tempo);
-		return tempo;
-	}
-	
-	public double GetTemp_max() {
-		return temp_max;
-	}
-	
-	public double GetTemp_min() {
-		return temp_min;
-	}
 }
 
 
