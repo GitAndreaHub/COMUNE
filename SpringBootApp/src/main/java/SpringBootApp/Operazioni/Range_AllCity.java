@@ -6,7 +6,7 @@ import GestioneDati.*;
 public class Range_AllCity {
 	
 	RangePersonalizzabile RangeP = new RangePersonalizzabile();
-	Media media = new Media();
+	Media media=new Media();
 	MinMax minmax = new MinMax();
 	
 	Vector<Double> VettoreDati = new Vector<Double>();
