@@ -4,7 +4,12 @@ import RaccoltaDati.ChiamataAPI_Actualy;
 import java.util.Vector;
 
 import GestioneDati.Varianza;
-
+/**
+ * Classe per gestire e ritornare la temperatura attuale di una città.
+ * 
+ * @author Stefano Martelli
+ *
+ */
 public class GestioneDatiActualy {
 	
 	private double Temp;
@@ -14,7 +19,14 @@ public class GestioneDatiActualy {
 	Vector<Double> appoggio=new Vector<Double>();
 	
 	
-	//costruttore
+	/**
+	 * Costruttore per Inizializzare i dati.
+	 * 
+	 * @param Temp Temperatura riportata in double
+	 * @param Max Valore di temperatura massima 
+	 * @param Min Valore di temperatura minima
+	 * @param Varianza Differenza fra minimo e massimo
+	 */
 	public GestioneDatiActualy(double Temp, double Max, double Min, double Varianza){
 		this.Temp=Temp;
 		this.Max=Max;
@@ -22,7 +34,11 @@ public class GestioneDatiActualy {
 		this.Varianza=Varianza;
 	}
 	
-	//setter
+	/**
+	 * Metodo che trova la temperatura attuale, la Min, Max e la Varianza richiamando la classe ChiamataAPI_Actualy.
+	 * 
+	 * @param Nome nome della città di cui si vuole sapere la temperatura attuale
+	 */
 	public void TemperaturaCorrente(String Nome) {
 		ChiamataAPI_Actualy chiamata= new ChiamataAPI_Actualy(null);
 		Varianza Var= new Varianza();
@@ -34,19 +50,38 @@ public class GestioneDatiActualy {
 		Varianza=Var.CalcoloVarianza(Min, Max);
 	}
 	
-	//getter
+	/**
+	 * Metodo che riporta la temperatura attuale.
+	 * 
+	 * @return Temp Temperatura riportata in double
+	 */
 	public double GetTemp() {
 		return Temp;
 	}
 	
+	/**
+	 * Metodo che riporta la temperatura massima.
+	 * 
+	 * @return Max Valore di temperatura massima
+	 */
 	public double GetMax() {
 		return Max;
 	}
 	
+	/**
+	 * Metodo che riporta la temperatura minima.
+	 * 
+	 * @return Min Valore di temperatura minima
+	 */
 	public double GetMin() {
 		return Min;
 	}
 	
+	/**
+	 * Metodo che riporta la varianza.
+	 * 
+	 * @return Varianza Differenza fra minimo e massimo
+	 */
 	public double GetVar() {
 		return Varianza;
 	}

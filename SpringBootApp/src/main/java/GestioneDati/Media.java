@@ -9,16 +9,16 @@ import java.util.Vector;
 public class Media implements OperazionisuVett{
 	private double media;
 	/**
-	 * Costruttore Vuoto
+	 * Costruttore Vuoto.
 	 */
 	public Media() {
 		
 	}
 	
 	/**
-	 * metodo che ti permette, dato un vettore, di calcolare la media.
+	 * Metodo che ti permette, dato un vettore, di calcolare la media.
 	 * 
-	 * @param v1 vettore con dati di tipo double
+	 * @param v1 Vettore con dati di tipo double
 	 */
 	public void OpsuVett(Vector<Double>v1){
 		int lunghezza= v1.size();
@@ -29,9 +29,9 @@ public class Media implements OperazionisuVett{
 		media=somma/lunghezza;
 	}
 	/**
-	 * Classe che riporta il valore della media.
+	 * Metodo che riporta il valore della media.
 	 * 
-	 * @return media
+	 * @return media Valore medio relativo al vettore prima inserito
 	 */
 	public double GetMedia() {
 		return media;

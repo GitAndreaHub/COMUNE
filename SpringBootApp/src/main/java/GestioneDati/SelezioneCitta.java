@@ -1,13 +1,26 @@
 package GestioneDati;
-
+/**
+ * Classe che ci permette di avere il nome della città.
+ * 
+ * @author Stefano Martelli
+ *
+ */
 public class SelezioneCitta {
 	
 	private String nomeCitta;
 	
+	/**
+	 * Costruttore Vuoto.
+	 */
 	public SelezioneCitta() {
 		
 	}
-	
+	/**
+	 * Metodo che, dopo aver inserito un valore Int, ritorna una stringa con il nome della città.
+	 * 
+	 * @param n Valore Int
+	 * @return nomeCitta Stringa con all'interno il nome della città
+	 */
 	public String Citta(int n) {
 		switch(n) {
 		case 0: 
@@ -40,6 +53,7 @@ public class SelezioneCitta {
 		case 9: 
 			nomeCitta="Fermo";
 			break;
+		default: break;
 		}
 		
 		return nomeCitta;
