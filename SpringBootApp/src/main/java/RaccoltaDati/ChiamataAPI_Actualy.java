@@ -57,7 +57,7 @@ public class ChiamataAPI_Actualy extends RaccoltaDati{
 			link.addRequestProperty("User-Agent", "Mozilla/5.0 (Windows NT 6.1; WOW64; rv:25.0) Gecko/20100101 Firefox/25.0");
 		
 			BufferedReader input = new BufferedReader(new InputStreamReader(link.getInputStream()));
-		
+			
 			//JSONObject temp = null;
 			String inputLine;
 			while((inputLine = input.readLine()) != null) {
