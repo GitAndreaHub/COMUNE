@@ -8,7 +8,7 @@ import org.junit.*;
 
 public class Test {
 
-	@Test
+	//@Test
 	public void TestRicercaID() {
 		
 		//Arrange

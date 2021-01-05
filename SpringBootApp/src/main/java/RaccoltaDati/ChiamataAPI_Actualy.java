@@ -48,9 +48,10 @@ public class ChiamataAPI_Actualy extends RaccoltaDati{
 		try {
 		
 			Id = ID.lettura(nome);
+			//Id = 3183089;
 			System.out.println(Id);
 		
-			URL oracle = new URL("api.openweathermap.org/data/2.5/weather?id=" + Id + "&appid=225a3d7ea81634ed4bb00b4cb10f4397");
+			URL oracle = new URL("https://api.openweathermap.org/data/2.5/weather?id=" + Id + "&appid=225a3d7ea81634ed4bb00b4cb10f4397");
 		
 			HttpsURLConnection link = (HttpsURLConnection) oracle.openConnection();
 			link.addRequestProperty("User-Agent", "Mozilla/5.0 (Windows NT 6.1; WOW64; rv:25.0) Gecko/20100101 Firefox/25.0");
@@ -86,9 +87,9 @@ public class ChiamataAPI_Actualy extends RaccoltaDati{
 			
 			}
 			
-			dati.set(0, tempo);
-			dati.set(1, temp_max);
-			dati.set(2, temp_min);
+			dati.add(0, tempo);
+			dati.add(1, temp_max);
+			dati.add(2, temp_min);
 			
 		
 		 } catch (FileNotFoundException e) {
@@ -97,10 +98,15 @@ public class ChiamataAPI_Actualy extends RaccoltaDati{
 	            e.printStackTrace();
 	     } catch (ParseException e) {
 	            e.printStackTrace();
+	     } catch (NullPointerException e) {
+	    	 	e.printStackTrace();
 	     }
-		 
+		
 	}
-	
+
+	public Vector<Double> GetDati() {
+		return dati;
+	}	
 }
 
 

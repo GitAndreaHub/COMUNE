@@ -24,7 +24,7 @@ public class GestioneDatiActualy {
 	
 	//setter
 	public void TemperaturaCorrente(String Nome) {
-		ChiamataAPI_Actualy chiamata= new ChiamataAPI_Actualy(null);
+		ChiamataAPI_Actualy chiamata= new ChiamataAPI_Actualy(appoggio);
 		Varianza Var= new Varianza();
 		chiamata.RaccoltaTemperature(Nome);
 		appoggio=chiamata.GetDati();
