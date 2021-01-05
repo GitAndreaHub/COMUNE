@@ -40,7 +40,7 @@ public class GestioneDatiActualy {
 	 * @param Nome nome della città di cui si vuole sapere la temperatura attuale
 	 */
 	public void TemperaturaCorrente(String Nome) {
-		ChiamataAPI_Actualy chiamata= new ChiamataAPI_Actualy(null);
+		ChiamataAPI_Actualy chiamata= new ChiamataAPI_Actualy(appoggio);
 		Varianza Var= new Varianza();
 		chiamata.RaccoltaTemperature(Nome);
 		appoggio=chiamata.GetDati();
