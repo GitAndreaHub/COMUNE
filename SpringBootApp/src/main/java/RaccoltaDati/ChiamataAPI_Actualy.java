@@ -48,8 +48,6 @@ public class ChiamataAPI_Actualy extends RaccoltaDati{
 		try {
 		
 			Id = ID.lettura(nome);
-			//Id = 3183089;
-			System.out.println(Id);
 		
 			URL oracle = new URL("https://api.openweathermap.org/data/2.5/weather?id=" + Id + "&appid=225a3d7ea81634ed4bb00b4cb10f4397");
 		
