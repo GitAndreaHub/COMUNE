@@ -1,20 +1,19 @@
 package RaccoltaDati;
-import java.util.Map;
 import java.util.Scanner;
-import java.io.BufferedInputStream;
-import java.io.BufferedReader;
-import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
-import java.io.InputStreamReader;
-import java.io.ObjectInputStream;
-import java.lang.ProcessHandle.Info;
 
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
-
+/**
+ * Classe che ricerca in un file l'id della città richiesta.
+ * 
+ * 
+ * @author Andrea Tassi
+ *
+ */
 public class RicercaID {
 	Scanner input = new Scanner(System.in);
 	JSONParser parser = new JSONParser();
@@ -22,12 +21,19 @@ public class RicercaID {
 	private Object ID = null;
 	private int Id;
 
-//costruttore	
+ /**
+  * Costruttore Vuoto.
+  */
 	public RicercaID() {
 		
 	}
 	
-//getter
+	/**
+	 * Metodo che legge il file e cerca l'Id correlato al nome inserito.
+	 * 
+	 * @param nome nome della città di cui vuoi sapere l'id
+	 * @return Id Id della città richiesta
+	 */
 	public Integer lettura(String nome) {
 		
 		try {
@@ -39,6 +45,7 @@ public class RicercaID {
 				JSONObject citta = (JSONObject) JsonObject.get(nome);
 				
 				Id = Integer.parseInt(citta.get("Id").toString()); 
+				
 					
 		} catch(FileNotFoundException e) {
 			System.out.println("Errore lettura file JSON");
@@ -48,9 +55,7 @@ public class RicercaID {
         } catch (IOException e) {
         	
         }
-		
 		return Id;
-		
 	}
 	
 }
