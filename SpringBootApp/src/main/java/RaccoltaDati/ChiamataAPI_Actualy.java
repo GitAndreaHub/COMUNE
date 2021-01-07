@@ -2,6 +2,13 @@ package RaccoltaDati;
 
 import java.io.BufferedReader;
 
+/**
+ * Classe che esegue la chiamata API da OpenWeather.
+ * 
+ * @author Andrea Tassi
+ */
+
+
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -34,10 +41,24 @@ public class ChiamataAPI_Actualy extends RaccoltaDati{
 	RicercaID ID = new RicercaID();
 	Vector<Double> dati = new Vector<Double>();
 	
-//costruttore	
+	/**
+	 * Costruttore che prende in ingresso il vettore "dati" di tipo Double, 
+	 * definito come "Dati".
+	 * 
+	 * @param Dati
+	 */
+		
 	public ChiamataAPI_Actualy(Vector<Double> Dati) {
 		super(Dati);
 	}
+	
+	/**
+	 * Metodo RaccoltaTemperature che riceve un nome di tipo String, utilizzato per 
+	 * richiamare la classe RicercaID e ottenere cosi l'Id della citta inserita dall'utente.
+	 * Si assegnano poi i dati presi dalla chiamata API all'interno del vettore "dati".
+	 * 
+	 * @param nome nome della citta di cui si vuole sapere l'Id.
+	 */
 	
 	public void RaccoltaTemperature(String nome) {
 		
@@ -101,6 +122,13 @@ public class ChiamataAPI_Actualy extends RaccoltaDati{
 	     }
 		
 	}
+	
+	/**
+	 * Metodo Getter.
+	 * 
+	 * @return dati vettore dati di tipo Double.
+	 * 
+	 */
 
 	public Vector<Double> GetDati() {
 		return dati;

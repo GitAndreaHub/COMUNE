@@ -3,6 +3,14 @@ package SpringBootApp.Operazioni;
 import java.util.Vector;
 import GestioneDati.*;
 
+/**
+ * Classe Range_AllCity si occupa della gestione del range scelto dall'utente relativa
+ * a tutte le citta'.
+ * 
+ * @author Andrea Tassi & Stefano Martelli
+ *
+ */
+
 public class Range_AllCity {
 	
 	RangePersonalizzabile RangeP = new RangePersonalizzabile();
@@ -17,10 +25,24 @@ public class Range_AllCity {
 	
 	private int PosizioneMin, PosizioneMax, PosMassimaVarianza;
 	
-//Costruttore	
+	/**
+	 * Costruttore vuoto.
+	 * 
+	 */
+	
 	public Range_AllCity() {
 		
 	}
+	
+	/**
+	 * Metodo AllCity che prende due valori, n1 e n2, entrambi di tipo Integer, utilizzati
+	 * per definire il renge scelto dall'utente. 
+	 * Vengono richiamati ppoi i vettori per ogni citta con il rispettivo range e vengono
+	 * poi estrapolati i dati metereologici.
+	 * 
+	 * @param n1 Dal giorno n1.
+	 * @param n2 Al giorno n2.
+	 */
 	
 	public void AllCity(int n1, int n2) {
 		
@@ -87,7 +109,13 @@ public class Range_AllCity {
 		
 	}
 	
-//Setter
+	/**
+	 * Metodo MediaMedie che richiama la classe Media.java e esegue la media
+	 * delle temperature di tutte le citta'.
+	 * 
+	 * @return media.GetMedia() ritorna il valore medio.
+	 */
+	
 	public double MediaMedie() {
 		
 		int u = 0;
@@ -99,6 +127,15 @@ public class Range_AllCity {
 		
 		return media.GetMedia();
 	}
+	
+	/**
+	 * Metodo Minimi che richima la classe MinMax.java e calcola il valore minimo 
+	 * tra tutti i minimi di tutte le citta'. Viene poi associata la citta' relativa 
+	 * al valore minimo.
+	 * 
+	 * 
+	 * @return minmax.GetMin() ritorna il valore minimo.
+	 */
 	
 	public double Minimi() {
 		
@@ -113,6 +150,14 @@ public class Range_AllCity {
 		return minmax.GetMin();
 	}
 	
+	/**
+	 * Metodo Massimi che richiama la classe MinMax.java e calcola in valore massimo
+	 * tra i valori massimi di tutte le citta'. Viene poi associata la citta' relativa 
+	 * al valore massimo.
+	 * 
+	 * @return minmax.GetMax() ritorna il valore massimo.
+	 */
+	
 	public double Massimi() {
 		
 		int u = 0;
@@ -124,6 +169,14 @@ public class Range_AllCity {
 		PosizioneMax=minmax.GetPosMax();
 		return minmax.GetMax();
 	}
+	
+	/**
+	 * Metodo Varianze che richiama la classe MinMax.java e trova la varianza massima
+	 * tra le varianze massime di tutte le citta'. Viene poi associata la citta' relativa 
+	 * alla varianza massima.
+	 * 
+	 * @return
+	 */
 	
 	public double Varianze() {
 		
@@ -137,13 +190,34 @@ public class Range_AllCity {
 		return minmax.GetMax();
 	}
 	
+	/**
+	 * Metodo GetPosMin viene ritornata la posizione relativa alla temperatura minima
+	 * utilizzata poi nella classe SelezioneCitta'.java.
+	 * 
+	 * @return PosizioneMin.
+	 */
+	
 	public int GetPosMin() {
 		return PosizioneMin;
 	}
 	
+	/**
+	 * Metodo GetPosMax viene ritornata la posizione relativa alla temperatura massima
+	 * utilizzata poi nella classe SelezioneCitta'.java.
+	 * 
+	 * @return PosizioneMax.
+	 */
+	
 	public int GetPosMax() {
 		return PosizioneMax;
 	}
+	
+	/**
+	 * Metodo GetPosMaxVar viene ritornata la posizione relativa alla varianza massima
+	 * utilizzata poi nella classe SelezioneCitta'.java.
+	 * 
+	 * @return PosMassimaVarianza.
+	 */
 	
 	public int GetPosMaxVar() {
 		return PosMassimaVarianza;

@@ -8,7 +8,7 @@ import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
 /**
- * Classe che ricerca in un file l'id della città richiesta.
+ * Classe che ricerca in un file .json l'id della città richiesta.
  * 
  * 
  * @author Andrea Tassi
@@ -18,7 +18,6 @@ public class RicercaID {
 	Scanner input = new Scanner(System.in);
 	JSONParser parser = new JSONParser();
 	
-	private Object ID = null;
 	private int Id;
 
  /**
@@ -31,8 +30,8 @@ public class RicercaID {
 	/**
 	 * Metodo che legge il file e cerca l'Id correlato al nome inserito.
 	 * 
-	 * @param nome nome della città di cui vuoi sapere l'id
-	 * @return Id Id della città richiesta
+	 * @param nome nome della città di cui vuoi sapere l'Id.
+	 * @return Id Id della città richiesta.
 	 */
 	public Integer lettura(String nome) {
 		
