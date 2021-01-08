@@ -7,19 +7,14 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import GestioneDati.SelezioneCitta;
-import SpringBootApp.Operazioni.GiornoCasuale;
-import SpringBootApp.Operazioni.RangePersonalizzabile;
-import SpringBootApp.Operazioni.Range_AllCity;
-
 @RestController
 public class SimpleRestController {
 	
 	@GetMapping("/actualy")
-    public JSONObject SinlgeCity(@RequestParam(name = "city", defaultValue = "Nessuna_Citta")String nome) {
+    public JSONObject SingleCity(@RequestParam(name = "city", defaultValue = "Nessuna_Citta")String nome) {
 		
 		Main main = new Main();
-		return main.RitornoDatiAcqualy(nome);
+		return main.RitornoDatiActualy(nome);
 		
 	}
 	

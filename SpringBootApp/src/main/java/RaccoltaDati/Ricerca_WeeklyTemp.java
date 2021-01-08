@@ -1,7 +1,6 @@
 package RaccoltaDati;
-import java.util.Scanner;
 
-import java.io.BufferedReader;
+import java.util.Scanner;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
@@ -101,6 +100,10 @@ public class Ricerca_WeeklyTemp extends RaccoltaDati {
         } catch (IOException e) {
         	
         }
+	}
+	
+	public Vector<Double> GetDati(){
+		return dati;
 	}
 
 }
