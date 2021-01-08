@@ -5,7 +5,7 @@ import GestioneDati.*;
 
 /**
  * Classe Range_AllCity si occupa della gestione del range scelto dall'utente relativa
- * a tutte le citta'.
+ * a tutte le città.
  * 
  * @author Andrea Tassi & Stefano Martelli
  *
@@ -26,7 +26,7 @@ public class Range_AllCity {
 	private int PosizioneMin, PosizioneMax, PosMassimaVarianza;
 	
 	/**
-	 * Costruttore vuoto.
+	 * Costruttore vuoto
 	 * 
 	 */
 	
@@ -40,8 +40,8 @@ public class Range_AllCity {
 	 * Vengono richiamati ppoi i vettori per ogni citta con il rispettivo range e vengono
 	 * poi estrapolati i dati metereologici.
 	 * 
-	 * @param n1 Dal giorno n1.
-	 * @param n2 Al giorno n2.
+	 * @param n1 Dal giorno n1
+	 * @param n2 Al giorno n2
 	 */
 	
 	public void AllCity(int n1, int n2) {
@@ -113,7 +113,7 @@ public class Range_AllCity {
 	 * Metodo MediaMedie che richiama la classe Media.java e esegue la media
 	 * delle temperature di tutte le citta'.
 	 * 
-	 * @return media.GetMedia() ritorna il valore medio.
+	 * @return media.GetMedia() ritorna il valore medio
 	 */
 	
 	public double MediaMedie() {
@@ -134,7 +134,7 @@ public class Range_AllCity {
 	 * al valore minimo.
 	 * 
 	 * 
-	 * @return minmax.GetMin() ritorna il valore minimo.
+	 * @return minmax.GetMin() ritorna il valore minimo
 	 */
 	
 	public double Minimi() {
@@ -155,7 +155,7 @@ public class Range_AllCity {
 	 * tra i valori massimi di tutte le citta'. Viene poi associata la citta' relativa 
 	 * al valore massimo.
 	 * 
-	 * @return minmax.GetMax() ritorna il valore massimo.
+	 * @return minmax.GetMax() ritorna il valore massimo
 	 */
 	
 	public double Massimi() {
@@ -175,7 +175,7 @@ public class Range_AllCity {
 	 * tra le varianze massime di tutte le citta'. Viene poi associata la citta' relativa 
 	 * alla varianza massima.
 	 * 
-	 * @return
+	 * @return minmax.GetMax()
 	 */
 	
 	public double Varianze() {
@@ -194,7 +194,7 @@ public class Range_AllCity {
 	 * Metodo GetPosMin viene ritornata la posizione relativa alla temperatura minima
 	 * utilizzata poi nella classe SelezioneCitta'.java.
 	 * 
-	 * @return PosizioneMin.
+	 * @return PosizioneMin
 	 */
 	
 	public int GetPosMin() {
@@ -205,7 +205,7 @@ public class Range_AllCity {
 	 * Metodo GetPosMax viene ritornata la posizione relativa alla temperatura massima
 	 * utilizzata poi nella classe SelezioneCitta'.java.
 	 * 
-	 * @return PosizioneMax.
+	 * @return PosizioneMax
 	 */
 	
 	public int GetPosMax() {
@@ -216,7 +216,7 @@ public class Range_AllCity {
 	 * Metodo GetPosMaxVar viene ritornata la posizione relativa alla varianza massima
 	 * utilizzata poi nella classe SelezioneCitta'.java.
 	 * 
-	 * @return PosMassimaVarianza.
+	 * @return PosMassimaVarianza
 	 */
 	
 	public int GetPosMaxVar() {

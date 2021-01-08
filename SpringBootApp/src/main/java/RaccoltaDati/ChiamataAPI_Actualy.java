@@ -1,29 +1,22 @@
 package RaccoltaDati;
 
 import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.net.URL;
+import javax.net.ssl.HttpsURLConnection;
+import org.json.simple.JSONObject;
+import org.json.simple.parser.JSONParser;
+import org.json.simple.parser.ParseException;
+import java.util.Scanner;
+import java.util.Vector;
 
 /**
  * Classe che esegue la chiamata API da OpenWeather.
  * 
  * @author Andrea Tassi
  */
-
-
-import java.io.FileNotFoundException;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.net.URL;
-
-import javax.net.ssl.HttpsURLConnection;
-
-//import org.json.simple.JSONArray;
-import org.json.simple.JSONObject;
-import org.json.simple.parser.JSONParser;
-import org.json.simple.parser.ParseException;
-
-import java.util.Scanner;
-import java.util.Vector;
-
 public class ChiamataAPI_Actualy extends RaccoltaDati{
 	
 	Scanner input = new Scanner(System.in);
@@ -43,9 +36,9 @@ public class ChiamataAPI_Actualy extends RaccoltaDati{
 	
 	/**
 	 * Costruttore che prende in ingresso il vettore "dati" di tipo Double, 
-	 * definito come "Dati".
+	 * presente nella classe astratta RaccoltaDati.
 	 * 
-	 * @param Dati
+	 * @param Dati Vettore di dati di tipo double
 	 */
 		
 	public ChiamataAPI_Actualy(Vector<Double> Dati) {
@@ -57,7 +50,7 @@ public class ChiamataAPI_Actualy extends RaccoltaDati{
 	 * richiamare la classe RicercaID e ottenere cosi l'Id della citta inserita dall'utente.
 	 * Si assegnano poi i dati presi dalla chiamata API all'interno del vettore "dati".
 	 * 
-	 * @param nome nome della citta di cui si vuole sapere l'Id.
+	 * @param nome nome della citta di cui si vuole sapere l'Id
 	 */
 	
 	public void RaccoltaTemperature(String nome) {
@@ -122,17 +115,7 @@ public class ChiamataAPI_Actualy extends RaccoltaDati{
 	     }
 		
 	}
-	
-	/**
-	 * Metodo Getter.
-	 * 
-	 * @return dati vettore dati di tipo Double.
-	 * 
-	 */
-
-	public Vector<Double> GetDati() {
-		return dati;
-	}	
+		
 }
 
 

@@ -63,7 +63,7 @@ public class RangePersonalizzabile {
 	/**
 	 * Metodo GetMedia che restituisce la media.
 	 * 
-	 * @return Media media delle temperature nel range di tempo.
+	 * @return Media media delle temperature nel range di tempo
 	 */
 	
 	public double GetMedia() {
@@ -73,7 +73,7 @@ public class RangePersonalizzabile {
 	/**
 	 * Metodo GetMin che restituisce il valore minimo.
 	 * 
-	 * @return Min valore minimo tra tutte le temperature della citta' nel range di tempo.
+	 * @return Min valore minimo tra tutte le temperature della citta' nel range di tempo
 	 */
 	
 	public double GetMin() {
@@ -83,7 +83,7 @@ public class RangePersonalizzabile {
 	/**
 	 * Metodo GetMin che restituisce il valore massimo.
 	 * 
-	 * @return Max valore massimo tra tutte le temperature della citta' nel range di tempo.
+	 * @return Max valore massimo tra tutte le temperature della citta' nel range di tempo
 	 */
 	
 	public double GetMax() {
@@ -93,7 +93,7 @@ public class RangePersonalizzabile {
 	/**
 	 * Metodo GetVarianza che restituisce la varianza massima.
 	 * 
-	 * @return Varianza valore varianza massima.
+	 * @return Varianza valore varianza massima
 	 */
 	
 	public double GetVarianza() {

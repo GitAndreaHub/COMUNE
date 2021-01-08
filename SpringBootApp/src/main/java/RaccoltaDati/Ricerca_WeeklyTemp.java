@@ -16,10 +16,9 @@ import java.util.Vector;
  * Classe Ricerca_WeeklyTemp che ricerca i dati meteo relativi a un certo arco di tempo
  * all'interno di un file .json.
  * 
- * @author utente
+ * @author Andrea Tassi
  *
  */
-
 public class Ricerca_WeeklyTemp extends RaccoltaDati {
 	Scanner input = new Scanner(System.in);
 	JSONParser parser = new JSONParser();
@@ -32,22 +31,20 @@ public class Ricerca_WeeklyTemp extends RaccoltaDati {
 	 * Costruttore che prende in ingresso il vettore "dati" di tipo Double, 
 	 * definito come "Dati".
 	 *  
-	 * @param Dati
+	 * @param Dati Vettore con dati di tipo Double
 	 * 
 	 */
-	
-//Costruttore	
 	public Ricerca_WeeklyTemp(Vector<Double> Dati) {
 		super(Dati);
 	}
+	
 	/**
 	 * Metodo RaccoltaTemperature che riceve un nome di tipo String che serve per 
 	 * ricercare all'interno del file "WeeklyTemp_File.json" la citta richiesta dall'utente 
 	 * per ottenere in vari dati, e sistemarli poi in un vettore "temp".
 	 * 
-	 * @param nome nome della citta richiesta dall'utente.
+	 * @param nome Nome della citta richiesta dall'utente
 	 */
-	
 	public void RaccoltaTemperature(String nome) {
 		
 		try {
