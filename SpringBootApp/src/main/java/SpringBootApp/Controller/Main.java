@@ -21,7 +21,7 @@ public class Main {
 	}
 	
 	@SuppressWarnings("unchecked")
-	public JSONObject RitornoDatiAcqualy(String nome) {
+	public JSONObject RitornoDatiActualy(String nome) {
 		
 		actualy.TemperaturaCorrente(nome);
 		
