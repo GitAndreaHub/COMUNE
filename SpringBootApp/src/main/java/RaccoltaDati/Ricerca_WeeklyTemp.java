@@ -4,7 +4,7 @@ import java.util.Scanner;
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
-
+import java.io.IOException;
 
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
@@ -52,10 +52,11 @@ public class Ricerca_WeeklyTemp extends RaccoltaDati {
 		
 		try {
 			
-				Scanner input = new Scanner(new BufferedReader(new FileReader("JSON_WeeklyTemp.json")));
+				Object obj = parser.parse(new FileReader("WeeklyTemp_File.json"));
+				//Scanner input = new Scanner(new BufferedReader(new FileReader("WeeklyTemp_File.json")));
 				
-				String lettura = null;
-				while( (input.hasNext()) ) {
+				//------String lettura = null;
+				/*while( (input.hasNext()) ) {
 					
 					JSONObject temperature = (JSONObject) parser.parse(lettura);
 					JSONObject citta = (JSONObject) temperature.get(nome);
@@ -63,22 +64,45 @@ public class Ricerca_WeeklyTemp extends RaccoltaDati {
 					int conta = 1;
 					for(int i=0; i < 5; i++) {
 						
-					    if(citta.get("temp" + conta) instanceof Double) temp.set(i, (Double)citta.get("temp" + conta));
+					    if(citta.get("temp" + conta) instanceof Double) temp.set(i, Double.parseDouble(citta.get("temp" + conta).toString()));
 					    else {
-					    	Temp = (Long) citta.get("temp" + conta); 
+					    	Temp = Long.parseLong(citta.get("temp" + conta).toString()); 
 					    	temp.set(i, Temp.doubleValue()); 
 					    }
 						Temp = null;
 						conta++;
 					}
 					
+				} */
+				
+				//JSONObject temperature = (JSONObject) parser.parse(lettura);
+				JSONObject temperature = (JSONObject) obj;
+				JSONObject citta = (JSONObject) temperature.get(nome);
+				
+				int conta = 1;
+				for(int i=0; i < 20; i++) {
+					System.out.println(temp);
+					Double get;
+					get = Double.parseDouble(citta.get("temp1" + conta).toString());
+				    if(citta.get("temp" + conta) instanceof Double) temp.set(i, get);
+				    else {
+				    	Temp = Long.parseLong(citta.get("temp" + conta).toString()); 
+				    	temp.set(i, Temp.doubleValue()); 
+				    }
+					Temp = null;
+					conta++;
 				}
+				
+				
+				
 				
 		} catch(FileNotFoundException e) {
 			System.out.println("Errore lettura file JSON");
 			System.out.println(e);
 		} catch (ParseException e) {
            e.printStackTrace();
+        } catch (IOException e) {
+        	
         }
 	}
 

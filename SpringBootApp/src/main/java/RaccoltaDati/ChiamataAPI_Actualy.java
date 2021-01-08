@@ -107,8 +107,8 @@ public class ChiamataAPI_Actualy extends RaccoltaDati{
 			}
 			
 			dati.add(0, tempo);
-			dati.add(1, temp_max);
-			dati.add(2, temp_min);
+			dati.add(1, temp_min);
+			dati.add(2, temp_max);
 			
 		
 		 } catch (FileNotFoundException e) {
