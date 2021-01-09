@@ -49,45 +49,33 @@ public class Ricerca_WeeklyTemp extends RaccoltaDati {
 		try {
 			
 				Object obj = parser.parse(new FileReader("WeeklyTemp_File.json"));
-				//Scanner input = new Scanner(new BufferedReader(new FileReader("WeeklyTemp_File.json")));
 				
-				//------String lettura = null;
-				/*while( (input.hasNext()) ) {
-					
-					JSONObject temperature = (JSONObject) parser.parse(lettura);
-					JSONObject citta = (JSONObject) temperature.get(nome);
-					
-					int conta = 1;
-					for(int i=0; i < 5; i++) {
-						
-					    if(citta.get("temp" + conta) instanceof Double) temp.set(i, Double.parseDouble(citta.get("temp" + conta).toString()));
-					    else {
-					    	Temp = Long.parseLong(citta.get("temp" + conta).toString()); 
-					    	temp.set(i, Temp.doubleValue()); 
-					    }
-						Temp = null;
-						conta++;
-					}
-					
-				} */
-				
-				//JSONObject temperature = (JSONObject) parser.parse(lettura);
 				JSONObject temperature = (JSONObject) obj;
 				JSONObject citta = (JSONObject) temperature.get(nome);
 				
 				int conta = 1;
-				for(int i=0; i < 20; i++) {
+				for(int i=0; i < 15; i++) {
+					/*
 					System.out.println(temp);
-					Double get;
-					get = Double.parseDouble(citta.get("temp1" + conta).toString());
-				    if(citta.get("temp" + conta) instanceof Double) temp.set(i, get);
+					System.out.println(conta);
+					
+				    if(citta.get("temp" + conta) instanceof Double) temp.add(i, Double.parseDouble(citta.get("temp1" + conta).toString()));
 				    else {
 				    	Temp = Long.parseLong(citta.get("temp" + conta).toString()); 
-				    	temp.set(i, Temp.doubleValue()); 
+				    	temp.add(i, Temp.doubleValue()); 
 				    }
 					Temp = null;
 					conta++;
+					*/
+					Double appoggio;
+					appoggio = Double.parseDouble(citta.get("temp" + conta).toString());
+					
+					temp.add(i, appoggio);
+					conta++;
+					
 				}
+				
+				System.out.println(temp);
 				
 				
 				
