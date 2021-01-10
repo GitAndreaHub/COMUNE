@@ -8,16 +8,16 @@ import java.util.Vector;
  *
  */
 public abstract class RaccoltaDati {
-	Vector<Double> dati = new Vector<Double>();
+	protected Vector<Double> dati = new Vector<Double>();
 	
 	
 	/**
-	 * Costruttore per inizializzarer il vettore che conterrà i dati richiesti.
+	 * Costruttore per inizializzare il vettore che conterrà i dati richiesti.
 	 * 
 	 * @param Dati Vettore con dati di tipo Double
 	 */
-	public RaccoltaDati(Vector<Double> Dati) {
-		this.dati=Dati;
+	public RaccoltaDati() {
+		
 	}
 	
 	/**
@@ -35,6 +35,10 @@ public abstract class RaccoltaDati {
 	 */
 	public Vector<Double> GetDati(){
 		return dati;
+	}
+	
+	public void Stampa() {
+		System.out.println(dati);
 	}
 
 }

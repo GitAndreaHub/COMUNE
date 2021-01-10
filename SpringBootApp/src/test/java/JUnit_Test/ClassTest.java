@@ -44,9 +44,9 @@ class ClassTest {
 		Double appoggio;
 		
 		//Arrange
-		Ricerca_WeeklyTemp weekly = new Ricerca_WeeklyTemp(null);
-		
+		Ricerca_WeeklyTemp weekly = new Ricerca_WeeklyTemp();
 		weekly.RaccoltaTemperature("Pesaro");
+		weekly.Stampa();
 		Test.addAll(weekly.GetDati());
 		appoggio = Test.get(0);
 		

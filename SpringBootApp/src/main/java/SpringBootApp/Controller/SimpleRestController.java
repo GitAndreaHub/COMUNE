@@ -21,8 +21,8 @@ public class SimpleRestController {
 	@PostMapping("/singolo_giorno_casuale")
 	public JSONObject SingleCity2(@RequestBody Main main) {
 		
-		int n = 0;
-		String nome = null;
+		//int n = 0;
+		//String nome = null;
 		return main.SingleDay(n, nome);
 		
 	}

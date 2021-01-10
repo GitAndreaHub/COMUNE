@@ -1,5 +1,6 @@
 package RaccoltaDati;
 
+import java.util.Arrays;
 import java.util.Scanner;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
@@ -22,9 +23,8 @@ public class Ricerca_WeeklyTemp extends RaccoltaDati {
 	Scanner input = new Scanner(System.in);
 	JSONParser parser = new JSONParser();
 	
-	Vector<Double> temp = new Vector<Double>();
+	 protected Vector<Double> temp = new Vector<Double>();
 	
-	private Long Temp;
 	
 	/**
 	 * Costruttore che prende in ingresso il vettore "dati" di tipo Double, 
@@ -33,8 +33,8 @@ public class Ricerca_WeeklyTemp extends RaccoltaDati {
 	 * @param Dati Vettore con dati di tipo Double
 	 * 
 	 */
-	public Ricerca_WeeklyTemp(Vector<Double> Dati) {
-		super(Dati);
+	public Ricerca_WeeklyTemp() {
+		
 	}
 	
 	/**
@@ -69,13 +69,15 @@ public class Ricerca_WeeklyTemp extends RaccoltaDati {
 					*/
 					Double appoggio;
 					appoggio = Double.parseDouble(citta.get("temp" + conta).toString());
-					
-					temp.add(i, appoggio);
+					dati.add(i, appoggio);
 					conta++;
 					
 				}
+				/*for(int i=0; i<temp.size(); i++) {
+					dati.set(i, temp.get(i));
+				}*/
 				
-				System.out.println(temp);
+				
 				
 				
 				
@@ -88,10 +90,6 @@ public class Ricerca_WeeklyTemp extends RaccoltaDati {
         } catch (IOException e) {
         	
         }
-	}
-	
-	public Vector<Double> GetDati(){
-		return dati;
 	}
 
 }

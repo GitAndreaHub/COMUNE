@@ -42,7 +42,7 @@ public class ChiamataAPI_Actualy extends RaccoltaDati{
 	 */
 		
 	public ChiamataAPI_Actualy(Vector<Double> Dati) {
-		super(Dati);
+		
 	}
 	
 	/**
@@ -116,9 +116,7 @@ public class ChiamataAPI_Actualy extends RaccoltaDati{
 		
 	}
 	
-	public Vector<Double> GetDati(){
-		return dati;
-	}
+
 		
 }
 
