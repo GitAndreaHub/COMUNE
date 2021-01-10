@@ -13,7 +13,7 @@ import GestioneDati.*;
 
 public class RangePersonalizzabile {
 	
-	Ricerca_WeeklyTemp DatiTemp= new Ricerca_WeeklyTemp(null);
+	Ricerca_WeeklyTemp DatiTemp= new Ricerca_WeeklyTemp();
 	Vector<Double> temperature = new Vector<Double>();
 	Vector<Double> temperaturefinali = new Vector<Double>();
 	Media metodomedia=new Media();
@@ -49,7 +49,7 @@ public class RangePersonalizzabile {
 		temperature.addAll(DatiTemp.GetDati()); //unisce i due vettori in temperature, mettendo Temp "sotto" temperature
 		int conta=0;
 		for(int i=n1-1; i<n2; i++) {
-			temperaturefinali.set(conta, temperature.get(i));
+			temperaturefinali.add(conta, temperature.get(i));
 			conta++;
 		}
 		metodomedia.OpsuVett(temperaturefinali);

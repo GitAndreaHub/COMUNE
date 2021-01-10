@@ -23,7 +23,9 @@ public class Range_AllCity {
 	Vector<Double> VettoreMassimi = new Vector<Double>();
 	Vector<Double> VettoreVarianze = new Vector<Double>();
 	
-	private int PosizioneMin, PosizioneMax, PosMassimaVarianza;
+	private int PosizioneMin;
+	private int PosizioneMax; 
+	private int PosMassimaVarianza;
 	
 	/**
 	 * Costruttore vuoto
@@ -48,64 +50,64 @@ public class Range_AllCity {
 		
 		RangeP.Range(n1, n2, "Ancona");
 		
-		VettoreDati.set(0, RangeP.GetMedia());
-		VettoreDati.set(1, RangeP.GetMin());
-		VettoreDati.set(2, RangeP.GetMax());
-		VettoreDati.set(3, RangeP.GetVarianza());
+		VettoreDati.add(0, RangeP.GetMedia());
+		VettoreDati.add(1, RangeP.GetMin());
+		VettoreDati.add(2, RangeP.GetMax());
+		VettoreDati.add(3, RangeP.GetVarianza());
 		
 		RangeP.Range(n1, n2, "Pesaro");
-		VettoreDati.set(4, RangeP.GetMedia());
-		VettoreDati.set(5, RangeP.GetMin());
-		VettoreDati.set(6, RangeP.GetMax());
-		VettoreDati.set(7, RangeP.GetVarianza());
+		VettoreDati.add(4, RangeP.GetMedia());
+		VettoreDati.add(5, RangeP.GetMin());
+		VettoreDati.add(6, RangeP.GetMax());
+		VettoreDati.add(7, RangeP.GetVarianza());
 		
 		RangeP.Range(n1, n2, "Fano");
-		VettoreDati.set(8, RangeP.GetMedia());
-		VettoreDati.set(9, RangeP.GetMin());
-		VettoreDati.set(10, RangeP.GetMax());
-		VettoreDati.set(11, RangeP.GetVarianza());
+		VettoreDati.add(8, RangeP.GetMedia());
+		VettoreDati.add(9, RangeP.GetMin());
+		VettoreDati.add(10, RangeP.GetMax());
+		VettoreDati.add(11, RangeP.GetVarianza());
 		
 		RangeP.Range(n1, n2, "Ascoli Piceno");
-		VettoreDati.set(12, RangeP.GetMedia());
-		VettoreDati.set(13, RangeP.GetMin());
-		VettoreDati.set(14, RangeP.GetMax());
-		VettoreDati.set(15, RangeP.GetVarianza());
+		VettoreDati.add(12, RangeP.GetMedia());
+		VettoreDati.add(13, RangeP.GetMin());
+		VettoreDati.add(14, RangeP.GetMax());
+		VettoreDati.add(15, RangeP.GetVarianza());
 		
 		RangeP.Range(n1, n2, "San Benedetto del Tronto");
-		VettoreDati.set(16, RangeP.GetMedia());
-		VettoreDati.set(17, RangeP.GetMin());
-		VettoreDati.set(18, RangeP.GetMax());
-		VettoreDati.set(19, RangeP.GetVarianza());
+		VettoreDati.add(16, RangeP.GetMedia());
+		VettoreDati.add(17, RangeP.GetMin());
+		VettoreDati.add(18, RangeP.GetMax());
+		VettoreDati.add(19, RangeP.GetVarianza());
 		
 		RangeP.Range(n1, n2, "Senigallia");
-		VettoreDati.set(20, RangeP.GetMedia());
-		VettoreDati.set(21, RangeP.GetMin());
-		VettoreDati.set(22, RangeP.GetMax());
-		VettoreDati.set(23, RangeP.GetVarianza());
+		VettoreDati.add(20, RangeP.GetMedia());
+		VettoreDati.add(21, RangeP.GetMin());
+		VettoreDati.add(22, RangeP.GetMax());
+		VettoreDati.add(23, RangeP.GetVarianza());
 		
 		RangeP.Range(n1, n2, "Civitanova Marche");
-		VettoreDati.set(24, RangeP.GetMedia());
-		VettoreDati.set(25, RangeP.GetMin());
-		VettoreDati.set(26, RangeP.GetMax());
-		VettoreDati.set(27, RangeP.GetVarianza());
+		VettoreDati.add(24, RangeP.GetMedia());
+		VettoreDati.add(25, RangeP.GetMin());
+		VettoreDati.add(26, RangeP.GetMax());
+		VettoreDati.add(27, RangeP.GetVarianza());
 		
 		RangeP.Range(n1, n2, "Macerata");
-		VettoreDati.set(28, RangeP.GetMedia());
-		VettoreDati.set(29, RangeP.GetMin());
-		VettoreDati.set(30, RangeP.GetMax());
-		VettoreDati.set(31, RangeP.GetVarianza());
+		VettoreDati.add(28, RangeP.GetMedia());
+		VettoreDati.add(29, RangeP.GetMin());
+		VettoreDati.add(30, RangeP.GetMax());
+		VettoreDati.add(31, RangeP.GetVarianza());
 		
 		RangeP.Range(n1, n2, "Jesi");
-		VettoreDati.set(32, RangeP.GetMedia());
-		VettoreDati.set(33, RangeP.GetMin());
-		VettoreDati.set(34, RangeP.GetMax());
-		VettoreDati.set(35, RangeP.GetVarianza());
+		VettoreDati.add(32, RangeP.GetMedia());
+		VettoreDati.add(33, RangeP.GetMin());
+		VettoreDati.add(34, RangeP.GetMax());
+		VettoreDati.add(35, RangeP.GetVarianza());
 		
 		RangeP.Range(n1, n2, "Fermo");
-		VettoreDati.set(36, RangeP.GetMedia());
-		VettoreDati.set(37, RangeP.GetMin());
-		VettoreDati.set(38, RangeP.GetMax());
-		VettoreDati.set(39, RangeP.GetVarianza());
+		VettoreDati.add(36, RangeP.GetMedia());
+		VettoreDati.add(37, RangeP.GetMin());
+		VettoreDati.add(38, RangeP.GetMax());
+		VettoreDati.add(39, RangeP.GetVarianza());
 		
 	}
 	
@@ -120,7 +122,7 @@ public class Range_AllCity {
 		
 		int u = 0;
 		for(int i = 0; i < 39; i = i + 4) {
-			VettoreMedie.set(u, VettoreDati.get(i));
+			VettoreMedie.add(u, VettoreDati.get(i));
 			u++;
 		}
 		media.OpsuVett(VettoreMedie);
@@ -141,7 +143,7 @@ public class Range_AllCity {
 		
 		int u = 0;
 		for(int i = 1; i < 39; i = i + 4) {
-			VettoreMinimi.set(u, VettoreDati.get(i));
+			VettoreMinimi.add(u, VettoreDati.get(i));
 		}
 		
 		
@@ -160,9 +162,9 @@ public class Range_AllCity {
 	
 	public double Massimi() {
 		
-		int u = 0;
+		int g = 0;
 		for(int i = 2; i < 39; i = i + 4) {
-			VettoreMassimi.set(u, VettoreDati.get(i));
+			VettoreMassimi.add(g, VettoreDati.get(i));
 		}
 		
 		minmax.OpsuVett(VettoreMinimi);
@@ -180,9 +182,9 @@ public class Range_AllCity {
 	
 	public double Varianze() {
 		
-		int u = 0;
+		int w = 0;
 		for(int i = 2; i < 39; i = i + 4) {
-			VettoreVarianze.set(u, VettoreDati.get(i));
+			VettoreVarianze.add(w, VettoreDati.get(i));
 		}
 		
 		minmax.OpsuVett(VettoreVarianze);

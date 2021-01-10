@@ -16,7 +16,15 @@ public class Main {
 	Range_AllCity RAC = new Range_AllCity();
 	SelezioneCitta SC = new SelezioneCitta();
 	
-	public Main(){
+	private int SingoloGiorno;
+	private String Nome;
+	private int FinoAl;
+	
+	public Main(int n, int n1, String nome){
+		
+		this.Nome = nome;
+		this.SingoloGiorno = n;
+		this.FinoAl = n1;
 		
 	}
 	
@@ -37,20 +45,20 @@ public class Main {
 	}
 	
 	@SuppressWarnings("unchecked")
-	public JSONObject SingleDay(int n, String nome) {
+	public JSONObject SingleDay() {
 		
 		JSONObject casuale = new JSONObject();
 		
-		casuale.put("La temperatura media", GC.TempGiornoCasuale(n, nome));
+		casuale.put("La temperatura media", GC.TempGiornoCasuale(SingoloGiorno, Nome));
 		
 		return casuale;
 		
 	}
 	
 	@SuppressWarnings("unchecked")
-	public JSONObject Range_PersSingle(int n1, int n2, String nome) {
+	public JSONObject Range_PersSingle() {
 		
-		RP.Range(n1, n2, nome);
+		RP.Range(SingoloGiorno, FinoAl, Nome);
 		
 		JSONObject Range = new JSONObject();
 		
@@ -64,9 +72,9 @@ public class Main {
 	}
 	
 	@SuppressWarnings("unchecked")
-	public JSONObject Range_PersTotal(int n1, int n2) {
+	public JSONObject Range_PersTotal() {
 		
-		RAC.AllCity(n1, n2);
+		RAC.AllCity(SingoloGiorno, FinoAl);
 		
 		JSONObject Total = new JSONObject();
 		

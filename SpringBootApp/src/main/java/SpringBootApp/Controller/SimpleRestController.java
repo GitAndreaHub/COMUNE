@@ -13,7 +13,7 @@ public class SimpleRestController {
 	@GetMapping("/actualy")
     public JSONObject SingleCity(@RequestParam(name = "city", defaultValue = "Nessuna_Citta")String nome) {
 		
-		Main main = new Main();
+		Main main = new Main(0, 0, nome);
 		return main.RitornoDatiActualy(nome);
 		
 	}
@@ -23,21 +23,21 @@ public class SimpleRestController {
 		
 		//int n = 0;
 		//String nome = null;
-		return main.SingleDay(n, nome);
+		return main.SingleDay();
 		
 	}
 	
 	@PostMapping("/range_personalizzabile_singola")
 	public JSONObject SingleCity3(@RequestBody Main main) {
 		
-		return main.Range_PersSingle(0, 0, null);
+		return main.Range_PersSingle();
 		
 	}
 	
 	@PostMapping("/range_personalizzabile_totale")
 	public JSONObject TotalCity(@RequestBody Main main) {
 		
-		return main.Range_PersTotal(0, 0);
+		return main.Range_PersTotal();
 		
 	}
 	

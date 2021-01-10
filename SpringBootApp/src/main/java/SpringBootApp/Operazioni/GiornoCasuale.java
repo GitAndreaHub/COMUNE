@@ -10,7 +10,7 @@ import java.util.Vector;
  */
 public class GiornoCasuale {
 	
-	Ricerca_WeeklyTemp ricerca= new Ricerca_WeeklyTemp(null);
+	Ricerca_WeeklyTemp ricerca= new Ricerca_WeeklyTemp();
 	private Vector<Double> temp=new Vector<Double>();
 	
 	/**
