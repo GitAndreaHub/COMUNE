@@ -9,7 +9,8 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import RaccoltaDati.*;
-import RaccoltaDati.*;
+import GestioneDati.*;
+import SpringBootApp.Operazioni.Range_AllCity;
 
 class ClassTest {
 
@@ -52,6 +53,42 @@ class ClassTest {
 		
 		//Assert
 		assertEquals(280.65, appoggio);
+		
+	}
+	
+	@Test
+	public void Test_MinMax() {
+		
+		MinMax minmax = new MinMax();
+		
+		Vector<Double> vetminmax = new Vector<Double>(4);
+		vetminmax.add(0, 3.2);
+		vetminmax.add(1, 5.2);
+		vetminmax.add(2, 0.7);
+		vetminmax.add(3, 9.0);
+		
+		minmax.OpsuVett(vetminmax);
+		
+		assertEquals(3, minmax.GetPosMax());
+		assertEquals(2, minmax.GetPosMin());
+		
+		assertEquals(9.0, minmax.GetMax());
+		assertEquals(0.7, minmax.GetMin());
+		
+	}
+	
+	@Test
+	public void Test_RangeAllCity() {
+		
+		int n1 = 2;
+		int n2 = 9;
+		
+		Range_AllCity City = new Range_AllCity();
+		
+		City.AllCity(n1, n2);
+		
+		assertEquals(275.35, City.Minimi());
+		assertEquals(289.76, City.Massimi());
 		
 	}
 

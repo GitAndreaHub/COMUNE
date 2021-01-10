@@ -10,7 +10,7 @@ import SpringBootApp.Operazioni.Range_AllCity;
 
 public class Main {
 	
-	GestioneDatiActualy actualy = new GestioneDatiActualy(0, 0, 0, 0);
+	GestioneDatiActualy actualy = new GestioneDatiActualy();
 	GiornoCasuale GC = new GiornoCasuale();
 	RangePersonalizzabile RP = new RangePersonalizzabile();
 	Range_AllCity RAC = new Range_AllCity();
@@ -20,11 +20,11 @@ public class Main {
 	private String Nome;
 	private int FinoAl;
 	
-	public Main(int n, int n1, String nome){
+	public Main(int n1, int n2, String nome){
 		
 		this.Nome = nome;
-		this.SingoloGiorno = n;
-		this.FinoAl = n1;
+		this.SingoloGiorno = n1;
+		this.FinoAl = n2;
 		
 	}
 	
@@ -42,7 +42,7 @@ public class Main {
 		
 		return Dati;
 		
-	}
+	} 
 	
 	@SuppressWarnings("unchecked")
 	public JSONObject SingleDay() {
@@ -85,6 +85,9 @@ public class Main {
 		Total.put("Appartiene a", SC.Citta(RAC.GetPosMax()));
 		Total.put("La varianza massima", RAC.Varianze());
 		Total.put("Appartiene a", SC.Citta(RAC.GetPosMaxVar()));
+		
+		System.out.println(SC.Citta(RAC.GetPosMax()));
+		System.out.println(SC.Citta(RAC.GetPosMaxVar()));
 		
 		return Total;
 		

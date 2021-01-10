@@ -109,6 +109,9 @@ public class Range_AllCity {
 		VettoreDati.add(38, RangeP.GetMax());
 		VettoreDati.add(39, RangeP.GetVarianza());
 		
+		System.out.println(VettoreDati);
+		
+		
 	}
 	
 	/**
@@ -141,9 +144,10 @@ public class Range_AllCity {
 	
 	public double Minimi() {
 		
-		int u = 0;
+		int j = 0;
 		for(int i = 1; i < 39; i = i + 4) {
-			VettoreMinimi.add(u, VettoreDati.get(i));
+			VettoreMinimi.add(j, VettoreDati.get(i));
+			j++;
 		}
 		
 		
@@ -165,9 +169,10 @@ public class Range_AllCity {
 		int g = 0;
 		for(int i = 2; i < 39; i = i + 4) {
 			VettoreMassimi.add(g, VettoreDati.get(i));
+			g++;
 		}
 		
-		minmax.OpsuVett(VettoreMinimi);
+		minmax.OpsuVett(VettoreMassimi);
 		PosizioneMax=minmax.GetPosMax();
 		return minmax.GetMax();
 	}
@@ -182,9 +187,10 @@ public class Range_AllCity {
 	
 	public double Varianze() {
 		
-		int w = 0;
-		for(int i = 2; i < 39; i = i + 4) {
-			VettoreVarianze.add(w, VettoreDati.get(i));
+		int v = 0;
+		for(int i = 3; i < 39; i = i + 4) {
+			VettoreVarianze.add(v, VettoreDati.get(i));
+			v++;
 		}
 		
 		minmax.OpsuVett(VettoreVarianze);

@@ -42,6 +42,11 @@ public class MinMax implements OperazionisuVett{
 				PosMax=i;
 			}
 		}
+		
+		/*System.out.println(Min);
+		System.out.println(Max);
+		System.out.println(PosMin);
+		System.out.println(PosMax); */
 	}
 	
 	/**

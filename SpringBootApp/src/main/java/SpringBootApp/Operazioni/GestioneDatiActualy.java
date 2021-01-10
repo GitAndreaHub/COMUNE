@@ -27,11 +27,8 @@ public class GestioneDatiActualy {
 	 * @param Min Valore di temperatura minima
 	 * @param Varianza Differenza fra minimo e massimo
 	 */
-	public GestioneDatiActualy(double Temp, double Max, double Min, double Varianza){
-		this.Temp=Temp;
-		this.Max=Max;
-		this.Min=Min;
-		this.Varianza=Varianza;
+	public GestioneDatiActualy(){
+		
 	}
 	
 	/**
