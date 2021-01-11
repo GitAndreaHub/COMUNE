@@ -61,9 +61,7 @@ public class Range_AllCity {
 	
 	public void AllCity(int n1, int n2) {
 		
-		int lunghezza = citta.size();
-		
-		for(int i = 0; i < lunghezza; i++) {
+		for(int i = 0; i < citta.size(); i++) {
 			
 			RangeP.Range(n1, n2, citta.get(i));
 			
@@ -73,7 +71,7 @@ public class Range_AllCity {
 			VettoreDati.add(RangeP.GetVarianza());
 			
 		}
-	
+	System.out.println(VettoreDati);
 		
 		
 	}

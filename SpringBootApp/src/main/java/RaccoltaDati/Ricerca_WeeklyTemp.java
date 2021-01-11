@@ -24,7 +24,7 @@ public class Ricerca_WeeklyTemp extends RaccoltaDati {
 	JSONParser parser = new JSONParser();
 	
 	
-	private Long Temp;
+	private Double appoggio;
 	protected Vector<Double> temp = new Vector<Double>();
 	
 	
@@ -56,7 +56,7 @@ public class Ricerca_WeeklyTemp extends RaccoltaDati {
 				JSONObject citta = (JSONObject) temperature.get(nome);
 				
 				int conta = 1;
-				for(int i=0; i < 15; i++) {
+				for(int i=0; i < 20; i++) {
 					/*
 					System.out.println(temp);
 					System.out.println(conta);
@@ -69,12 +69,14 @@ public class Ricerca_WeeklyTemp extends RaccoltaDati {
 					Temp = null;
 					conta++;
 					*/
-					Double appoggio;
+					
 					appoggio = Double.parseDouble(citta.get("temp" + conta).toString());
 					dati.add(i, appoggio);
 					conta++;
+					appoggio = 0.0;
 					
 				}
+				
 				/*for(int i=0; i<temp.size(); i++) {
 					dati.set(i, temp.get(i));
 				}*/

@@ -86,8 +86,8 @@ public class Main {
 		Total.put("La varianza massima", RAC.Varianze());
 		Total.put("Appartiene a", SC.Citta(RAC.GetPosMaxVar()));
 		
-		System.out.println(SC.Citta(RAC.GetPosMax()));
-		System.out.println(SC.Citta(RAC.GetPosMaxVar()));
+		//System.out.println(SC.Citta(RAC.GetPosMax()));
+		//System.out.println(SC.Citta(RAC.GetPosMaxVar()));
 		
 		return Total;
 		

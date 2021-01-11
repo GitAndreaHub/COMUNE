@@ -80,15 +80,15 @@ class ClassTest {
 	@Test
 	public void Test_RangeAllCity() {
 		
-		int n1 = 2;
-		int n2 = 9;
+		int n1 = 1;
+		int n2 = 2;
 		
 		Range_AllCity City = new Range_AllCity();
 		
 		City.AllCity(n1, n2);
 		
-		assertEquals(275.35, City.Minimi());
-		assertEquals(289.76, City.Massimi());
+		assertEquals(281.53, City.Minimi());
+		assertEquals(279.17, City.Massimi());
 		
 	}
 
