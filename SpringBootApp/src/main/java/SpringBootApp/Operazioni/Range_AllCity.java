@@ -61,17 +61,21 @@ public class Range_AllCity {
 	
 	public void AllCity(int n1, int n2) {
 		
+		int conta = 0;
+		
 		for(int i = 0; i < citta.size(); i++) {
 			
 			RangeP.Range(n1, n2, citta.get(i));
 			
-			VettoreDati.add(RangeP.GetMedia());
-			VettoreDati.add(RangeP.GetMin());
-			VettoreDati.add(RangeP.GetMax());
-			VettoreDati.add(RangeP.GetVarianza());
+			VettoreDati.add(conta, RangeP.GetMedia());
+			VettoreDati.add(conta + 1, RangeP.GetMin());
+			VettoreDati.add(conta + 2, RangeP.GetMax());
+			VettoreDati.add(conta + 3, RangeP.GetVarianza());
 			
+			conta = conta + 4;
 		}
-	System.out.println(VettoreDati);
+	
+		System.out.println(VettoreDati);
 		
 		
 	}
