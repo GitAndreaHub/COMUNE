@@ -23,7 +23,9 @@ public class Ricerca_WeeklyTemp extends RaccoltaDati {
 	Scanner input = new Scanner(System.in);
 	JSONParser parser = new JSONParser();
 	
-	 protected Vector<Double> temp = new Vector<Double>();
+	
+	private Long Temp;
+	protected Vector<Double> temp = new Vector<Double>();
 	
 	
 	/**
@@ -77,6 +79,8 @@ public class Ricerca_WeeklyTemp extends RaccoltaDati {
 					dati.set(i, temp.get(i));
 				}*/
 				
+				//System.out.println(dati);
+				
 				
 				
 				
@@ -91,5 +95,6 @@ public class Ricerca_WeeklyTemp extends RaccoltaDati {
         	
         }
 	}
+	
 
 }

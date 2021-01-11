@@ -74,7 +74,7 @@ public class Range_AllCity {
 			
 		}
 	
-		System.out.println(VettoreDati);
+		//System.out.println(VettoreDati);
 		
 	}
 	
