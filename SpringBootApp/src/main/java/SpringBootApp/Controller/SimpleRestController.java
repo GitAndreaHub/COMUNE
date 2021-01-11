@@ -41,5 +41,4 @@ public class SimpleRestController {
 		
 	}
 	
-	//commento test
 }
