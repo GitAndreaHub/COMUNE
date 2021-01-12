@@ -41,7 +41,7 @@ public class ChiamataAPI_Actualy extends RaccoltaDati{
 	 * @param Dati Vettore di dati di tipo double
 	 */
 		
-	public ChiamataAPI_Actualy(Vector<Double> Dati) {
+	public ChiamataAPI_Actualy() {
 		
 	}
 	
