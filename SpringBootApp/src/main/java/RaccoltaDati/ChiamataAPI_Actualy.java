@@ -118,7 +118,7 @@ public class ChiamataAPI_Actualy extends RaccoltaDati{
 	
 	public Vector<Double> GetDati(){
 		return dati;
-	}
+	} 
 	
 
 		

@@ -57,18 +57,7 @@ public class Ricerca_WeeklyTemp extends RaccoltaDati {
 				
 				int conta = 1;
 				for(int i=0; i < 20; i++) {
-					/*
-					System.out.println(temp);
-					System.out.println(conta);
 					
-				    if(citta.get("temp" + conta) instanceof Double) temp.add(i, Double.parseDouble(citta.get("temp1" + conta).toString()));
-				    else {
-				    	Temp = Long.parseLong(citta.get("temp" + conta).toString()); 
-				    	temp.add(i, Temp.doubleValue()); 
-				    }
-					Temp = null;
-					conta++;
-					*/
 					
 					appoggio = Double.parseDouble(citta.get("temp" + conta).toString());
 					dati.add(i, appoggio);
@@ -76,17 +65,6 @@ public class Ricerca_WeeklyTemp extends RaccoltaDati {
 					appoggio = 0.0;
 					
 				}
-				
-				/*for(int i=0; i<temp.size(); i++) {
-					dati.set(i, temp.get(i));
-				}*/
-				
-				//System.out.println(dati);
-				
-				
-				
-				
-				
 				
 		} catch(FileNotFoundException e) {
 			System.out.println("Errore lettura file JSON");
@@ -98,5 +76,15 @@ public class Ricerca_WeeklyTemp extends RaccoltaDati {
         }
 	}
 	
-
+	/**
+	 * 
+	 * Metodo che pulisce il vettore dati.
+	 * 
+	 */
+	
+	public void AzzeramentoDati() {
+		dati.clear();
+	}
+	
+	
 }

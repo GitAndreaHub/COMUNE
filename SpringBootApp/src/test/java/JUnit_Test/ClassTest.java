@@ -14,19 +14,6 @@ import SpringBootApp.Operazioni.Range_AllCity;
 
 class ClassTest {
 
-	/*@BeforeEach
-	void setUp() throws Exception {
-	}
-
-	@AfterEach
-	void tearDown() throws Exception {
-	}
-
-	@Test
-	void test() {
-		fail("Not yet implemented");
-	}
-	*/
 	@Test
 	public void TestRicercaID() {
 		
@@ -87,8 +74,8 @@ class ClassTest {
 		
 		City.AllCity(n1, n2);
 		
-		assertEquals(281.53, City.Minimi());
-		assertEquals(279.17, City.Massimi());
+		assertEquals(279.17, City.Minimi());
+		assertEquals(281.53, City.Massimi());
 		
 	}
 

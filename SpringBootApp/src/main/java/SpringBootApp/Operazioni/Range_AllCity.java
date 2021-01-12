@@ -75,9 +75,6 @@ public class Range_AllCity {
 			conta = conta + 4;
 		}
 	
-		System.out.println(VettoreDati);
-		
-		
 	}
 	
 	/**

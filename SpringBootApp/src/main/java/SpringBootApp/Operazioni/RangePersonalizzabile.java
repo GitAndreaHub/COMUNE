@@ -14,7 +14,7 @@ import GestioneDati.*;
 public class RangePersonalizzabile {
 	
 	Ricerca_WeeklyTemp DatiTemp= new Ricerca_WeeklyTemp();
-	Vector<Double> temperature = new Vector<Double>();
+	Vector<Double> temperature = new Vector<Double>(20);
 	Vector<Double> temperaturefinali = new Vector<Double>();
 	Media metodomedia=new Media();
 	MinMax metodominmax=new MinMax();
@@ -37,7 +37,7 @@ public class RangePersonalizzabile {
 	/**
 	 * Metodo Range che prende i valori n1, n2 e il nome della citta'. Utilizza poi la 
 	 * classe WeeklyTemp.java per raccogliere i dati relativi alla citta' inserita 
-	 * dall'utente.
+	 * dall'utente. 
 	 * 
 	 * @param n1 Dal giorno n1.
 	 * @param n2 Al giorno n2.
@@ -47,6 +47,7 @@ public class RangePersonalizzabile {
 	public void Range(int n1, int n2, String nome){
 		DatiTemp.RaccoltaTemperature(nome);
 		temperature.addAll(DatiTemp.GetDati()); //unisce i due vettori in temperature, mettendo Temp "sotto" temperature
+		
 		int conta=0;
 		for(int i=n1-1; i<n2; i++) {
 			temperaturefinali.add(conta, temperature.get(i));
@@ -58,6 +59,10 @@ public class RangePersonalizzabile {
 		Max=metodominmax.GetMax();
 		Min=metodominmax.GetMin();
 		Varianza=metodovarianza.CalcoloVarianza(Min, Max);
+		
+		temperature.clear();
+		temperaturefinali.clear();
+		DatiTemp.AzzeramentoDati();
 	}
 	
 	/**
@@ -99,5 +104,6 @@ public class RangePersonalizzabile {
 	public double GetVarianza() {
 		return Varianza;
 	}
+	
 
 }

@@ -78,16 +78,17 @@ public class Main {
 		
 		JSONObject Total = new JSONObject();
 		
-		Total.put("La media di tutte le temperature", RAC.MediaMedie());
-		Total.put("Temperaura piu' bassa", RAC.Minimi());
-		Total.put("Appartiene a", SC.Citta(RAC.GetPosMin()));
-		Total.put("La temperatura piu alta", RAC.Massimi());
-		Total.put("Appartiene a", SC.Citta(RAC.GetPosMax()));
-		Total.put("La varianza massima", RAC.Varianze());
-		Total.put("Appartiene a", SC.Citta(RAC.GetPosMaxVar()));
+		Total.put("1-La media di tutte le temperature", RAC.MediaMedie());
+		Total.put("2-Temperatura piu' bassa", RAC.Minimi());
+		Total.put("2--Appartiene a", SC.Citta(RAC.GetPosMin()));
+		Total.put("3-La temperatura piu alta", RAC.Massimi());
+		Total.put("3--Appartiene a", SC.Citta(RAC.GetPosMax()));
+		Total.put("4-La varianza massima", RAC.Varianze());
+		Total.put("4--Appartiene a", SC.Citta(RAC.GetPosMaxVar()));
 		
-		//System.out.println(SC.Citta(RAC.GetPosMax()));
-		//System.out.println(SC.Citta(RAC.GetPosMaxVar()));
+		System.out.println(SC.Citta(RAC.GetPosMin()));
+		System.out.println(SC.Citta(RAC.GetPosMax()));
+		System.out.println(SC.Citta(RAC.GetPosMaxVar()));
 		
 		return Total;
 		
