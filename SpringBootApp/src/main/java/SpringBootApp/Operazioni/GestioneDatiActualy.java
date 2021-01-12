@@ -20,13 +20,11 @@ public class GestioneDatiActualy {
 	
 	
 	/**
-	 * Costruttore per Inizializzare i dati.
 	 * 
-	 * @param Temp Temperatura riportata in double
-	 * @param Max Valore di temperatura massima 
-	 * @param Min Valore di temperatura minima
-	 * @param Varianza Differenza fra minimo e massimo
+	 * Costruttore vuoto.
+	 * 
 	 */
+	
 	public GestioneDatiActualy(){
 		
 	}

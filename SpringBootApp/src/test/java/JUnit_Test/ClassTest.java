@@ -12,7 +12,21 @@ import RaccoltaDati.*;
 import GestioneDati.*;
 import SpringBootApp.Operazioni.Range_AllCity;
 
+/**
+ * Classe JUnit Test.
+ * 
+ * @author Andrea Tassi
+ * 
+ * 
+ */
+
 class ClassTest {
+	
+	/**
+	 * 
+	 * Metodo TestRicercaID si testa La classe "RicercaID".
+	 * 
+	 */
 
 	@Test
 	public void TestRicercaID() {
@@ -25,6 +39,12 @@ class ClassTest {
 		
 	}
 	
+	/**
+	 * 
+	 * Metodo Test_RicercaWeeklyTemp si testa la classe "Ricerca_WeeklyTemp".
+	 * 
+	 */
+	
 	@Test
 	public void Test_RicercaWeeklyTemp() {
 		
@@ -34,7 +54,6 @@ class ClassTest {
 		//Arrange
 		Ricerca_WeeklyTemp weekly = new Ricerca_WeeklyTemp();
 		weekly.RaccoltaTemperature("Pesaro");
-		weekly.Stampa();
 		Test.addAll(weekly.GetDati());
 		appoggio = Test.get(0);
 		
@@ -42,6 +61,12 @@ class ClassTest {
 		assertEquals(280.65, appoggio);
 		
 	}
+	
+	/**
+	 * 
+	 * Metodo Test_MinMax si testa la classe "MinMax".
+	 * 
+	 */
 	
 	@Test
 	public void Test_MinMax() {
@@ -63,6 +88,12 @@ class ClassTest {
 		assertEquals(0.7, minmax.GetMin());
 		
 	}
+	
+	/**
+	 * 
+	 * Metodo Test_RangeAllCity si testa la classe Range_AllCity.
+	 * 
+	 */
 	
 	@Test
 	public void Test_RangeAllCity() {

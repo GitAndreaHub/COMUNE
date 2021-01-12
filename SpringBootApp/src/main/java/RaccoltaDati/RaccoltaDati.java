@@ -37,8 +37,5 @@ public abstract class RaccoltaDati {
 		return dati;
 	}
 	
-	public void Stampa() {
-		System.out.println(dati);
-	}
 
 }

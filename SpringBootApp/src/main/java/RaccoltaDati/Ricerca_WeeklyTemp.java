@@ -78,7 +78,7 @@ public class Ricerca_WeeklyTemp extends RaccoltaDati {
 	
 	/**
 	 * 
-	 * Metodo che pulisce il vettore dati.
+	 * Metodo AzzeramentoDati che pulisce il vettore dati.
 	 * 
 	 */
 	

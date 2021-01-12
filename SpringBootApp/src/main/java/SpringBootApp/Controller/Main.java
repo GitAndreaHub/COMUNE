@@ -8,6 +8,13 @@ import SpringBootApp.Operazioni.GiornoCasuale;
 import SpringBootApp.Operazioni.RangePersonalizzabile;
 import SpringBootApp.Operazioni.Range_AllCity;
 
+/**
+ * Classe Main si occupa di gestire i dati metereologici in uscita, inserendoli nei corrispondenti JSONObject.
+ * 
+ * @author Andrea Tassi.
+ *
+ */
+
 public class Main {
 	
 	GestioneDatiActualy actualy = new GestioneDatiActualy();
@@ -20,6 +27,14 @@ public class Main {
 	private String Nome;
 	private int FinoAl;
 	
+	/**
+	 * Costruttore.
+	 * 
+	 * @param n1 Dal Giorno.
+	 * @param n2 Al Giorno.
+	 * @param nome Nome della citta inserita dall'utente.
+	 */
+	
 	public Main(int n1, int n2, String nome){
 		
 		this.Nome = nome;
@@ -28,6 +43,14 @@ public class Main {
 		
 	}
 	
+	/**
+	 * Metodo RitornoDatiActualy che richiamando la classe "GestioneDatiActualy" inserisce tutti i dati in 
+	 * un JSONObject.
+	 * 
+	 * @param nome Nme della citta.
+	 * @return Dati JSONObject con all'interno i dati metereologici giornalieri.
+	 */
+	
 	@SuppressWarnings("unchecked")
 	public JSONObject RitornoDatiActualy(String nome) {
 		
@@ -35,7 +58,7 @@ public class Main {
 		
 		JSONObject Dati = new JSONObject();
 
-		Dati.put("Temperatura attuale", actualy.GetTemp());
+		Dati.put("La temperatura attuale", actualy.GetTemp());
 		Dati.put("La temperatura massima", actualy.GetMax());
 		Dati.put("La temperatura minima", actualy.GetMin());
 		Dati.put("La varianza massima", actualy.GetVar()); 
@@ -43,6 +66,13 @@ public class Main {
 		return Dati;
 		
 	} 
+	
+	/**
+	 * Metodo SingleDay che inserisce all'interno di un JSONObject "casuale" i dati metereologici relativi ad
+	 * un citta in un giorno scelti dall'atente.
+	 * 
+	 * @return casuale JSONObject con all'interno i dati metereologici di una citta in un giorno tra i 20.
+	 */
 	
 	@SuppressWarnings("unchecked")
 	public JSONObject SingleDay() {
@@ -54,6 +84,14 @@ public class Main {
 		return casuale;
 		
 	}
+	
+	/**
+	 * Metodo Range_PersSingle che inserisce all'interno del JSONObject "Range" i dati metereologici
+	 * relativi ad una citta' in un determinato range scelti dall'utente.
+	 * 
+	 * @return Range JSONObject con all'interno i dati metereologici di una citta 
+	 * in un range personalizzabile di max 20 giorni.
+	 */
 	
 	@SuppressWarnings("unchecked")
 	public JSONObject Range_PersSingle() {
@@ -71,6 +109,14 @@ public class Main {
 		
 	}
 	
+	/**
+	 * Metodo Range_PersTotal che inserisce all'interno del JSONObject "Total" i dati metereologici
+	 * relativi a tutte e 10 le citta marchigiane in un determinato range scelto dall'utente.
+	 * 
+	 * @return Total JSONObject con all'interno i dati metereologici di tutte e 10 le citta marchigiane 
+	 * in un range personalizzabile di max 20 giorni.
+	 */
+	
 	@SuppressWarnings("unchecked")
 	public JSONObject Range_PersTotal() {
 		
@@ -85,10 +131,6 @@ public class Main {
 		Total.put("3--Appartiene a", SC.Citta(RAC.GetPosMax()));
 		Total.put("4-La varianza massima", RAC.Varianze());
 		Total.put("4--Appartiene a", SC.Citta(RAC.GetPosMaxVar()));
-		
-		System.out.println(SC.Citta(RAC.GetPosMin()));
-		System.out.println(SC.Citta(RAC.GetPosMax()));
-		System.out.println(SC.Citta(RAC.GetPosMaxVar()));
 		
 		return Total;
 		

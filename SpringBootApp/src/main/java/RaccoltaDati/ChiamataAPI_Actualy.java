@@ -116,6 +116,14 @@ public class ChiamataAPI_Actualy extends RaccoltaDati{
 		
 	}
 	
+	/**
+	 * 
+	 * Metodo GetDati.
+	 * 
+	 * @return dati vettore dati <Double>
+	 * 
+	 */
+	
 	public Vector<Double> GetDati(){
 		return dati;
 	} 

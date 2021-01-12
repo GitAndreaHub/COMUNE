@@ -30,7 +30,7 @@ public class Range_AllCity {
 	private int PosMassimaVarianza;
 	
 	/**
-	 * Costruttore vuoto
+	 * Costruttore si inizializzano in vettore "citta" <String>
 	 * 
 	 */
 	
