@@ -58,10 +58,10 @@ public class Main {
 		
 		JSONObject Dati = new JSONObject();
 
-		Dati.put("La temperatura attuale", actualy.GetTemp());
-		Dati.put("La temperatura massima", actualy.GetMax());
-		Dati.put("La temperatura minima", actualy.GetMin());
-		Dati.put("La varianza massima", actualy.GetVar()); 
+		Dati.put("La temperatura attuale di " + nome, actualy.GetTemp());
+		Dati.put("La temperatura massima di " + nome, actualy.GetMax());
+		Dati.put("La temperatura minima di " + nome, actualy.GetMin());
+		Dati.put("La varianza massima di " + nome, actualy.GetVar()); 
 		
 		return Dati;
 		

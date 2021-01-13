@@ -22,27 +22,28 @@ public class GestioneScrittura_JSON {
 	
 	public GestioneScrittura_JSON() {
 		
-		citta.add("Ancona");
-		citta.add("Pesaro");
-		citta.add("Fano");
-		citta.add("Ascoli Piceno");
-		citta.add("San Benedetto del Tronto");
-		citta.add("Senigallia");
-		citta.add("Civitanova Marche");
-		citta.add("Macerata");
-		citta.add("Jesi");
-		citta.add("Fermo");
+		citta.add(0, "Ancona");
+		citta.add(1, "Pesaro");
+		citta.add(2, "Fano");
+		citta.add(3, "Ascoli Piceno");
+		citta.add(4, "San Benedetto del Tronto");
+		citta.add(5, "Senigallia");
+		citta.add(6, "Civitanova Marche");
+		citta.add(7, "Macerata");
+		citta.add(8, "Jesi");
+		citta.add(9, "Fermo");
 		
 	}
 	
+	@SuppressWarnings("unchecked")
 	public void GetJSONObject() {
 		
 		for(int i = 0; i < citta.size(); i++) {
 			
 			Main main = new Main(0, 0, citta.get(i));
 			
-			DatiCitta = main.RitornoDatiActualy(citta.get(i));
-		
+			DatiCitta.putAll(main.RitornoDatiActualy(citta.get(i)));
+			
 		}
 		System.out.println(DatiCitta);
 		
@@ -52,12 +53,12 @@ public class GestioneScrittura_JSON {
 		
 		try {
 	           
-            ObjectOutputStream file_output = new ObjectOutputStream(new BufferedOutputStream(new FileOutputStream("JSON_File_Write.json", true))) {
+            ObjectOutputStream file_output = new ObjectOutputStream(new BufferedOutputStream(new FileOutputStream("JSON_File_Write.json"))) {
                 
-            	protected void writeStreamHeader() throws IOException {
+            	/*protected void writeStreamHeader() throws IOException {
                    
                     reset();
-                }
+                } */
                
             };
            
