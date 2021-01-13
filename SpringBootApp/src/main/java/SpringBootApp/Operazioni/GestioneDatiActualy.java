@@ -7,7 +7,7 @@ import GestioneDati.Varianza;
 /**
  * Classe per gestire e ritornare la temperatura attuale di una città.
  * 
- * @author Stefano Martelli
+ * @author Stefano Martelli.
  *
  */
 public class GestioneDatiActualy {

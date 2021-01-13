@@ -7,7 +7,7 @@ import GestioneDati.*;
  * Classe RangePersonalizzabile che gestisce i dati di una singola citta relative ad un 
  * range personalizzabile.
  * 
- * @author Andrea Tassi 
+ * @author Andrea Tassi. 
  *
  */
 

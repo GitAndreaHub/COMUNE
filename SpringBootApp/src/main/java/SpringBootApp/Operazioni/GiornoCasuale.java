@@ -5,7 +5,7 @@ import java.util.Vector;
 /**
  * Classe per gestire e ritornare la temperatura di una città in unn giorno scelto dall'utente.
  * 
- * @author Stefano Martelli
+ * @author Stefano Martelli.
  *
  */
 public class GiornoCasuale {

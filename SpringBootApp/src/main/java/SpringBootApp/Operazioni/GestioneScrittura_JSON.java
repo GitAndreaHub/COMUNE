@@ -1,17 +1,21 @@
 package SpringBootApp.Operazioni;
 
 import java.io.BufferedOutputStream;
-import java.io.BufferedWriter;
 import java.io.FileOutputStream;
-import java.io.FileWriter;
 import java.io.IOException;
 import java.io.ObjectOutputStream;
-import java.io.PrintWriter;
 import java.util.Vector;
 
 import org.json.simple.JSONObject;
 
 import SpringBootApp.Controller.Main;
+
+/**
+ * Classe per la scrittura dei dati metereologici giornalieri su file JSON.
+ * 
+ * @author Andrea Tassi
+ *
+ */
 
 public class GestioneScrittura_JSON {
 	
@@ -19,6 +23,11 @@ public class GestioneScrittura_JSON {
 	Vector<Double> DATI = new Vector<Double>();
 	JSONObject DatiCitta = new JSONObject();
 	
+	/**
+	 * 
+	 * Costruttore si inizializza il vettore citta.
+	 * 
+	 */
 	
 	public GestioneScrittura_JSON() {
 		
@@ -35,6 +44,13 @@ public class GestioneScrittura_JSON {
 		
 	}
 	
+	/**
+	 * 
+	 * Metodo GetJSONObject che richiama la classe main, untilizzando il metodo RitornoDatiActualy, 
+	 * e salva i dati in un JSONObject.
+	 * 
+	 */
+	
 	@SuppressWarnings("unchecked")
 	public void GetJSONObject() {
 		
@@ -49,16 +65,23 @@ public class GestioneScrittura_JSON {
 		
 	}
 	
+	/**
+	 * 
+	 * Metodo Scrittura si occupa della scrittura del JSONObject "DatiCitta" all'interno del 
+	 * JSON file "Dati_giornalieri.json".
+	 * 
+	 */
+	
 	public void Scrittura() {
 		
 		try {
 	           
-            ObjectOutputStream file_output = new ObjectOutputStream(new BufferedOutputStream(new FileOutputStream("JSON_File_Write.json"))) {
+            ObjectOutputStream file_output = new ObjectOutputStream(new BufferedOutputStream(new FileOutputStream("Dati_giornalieri.json", true))) {
                 
-            	/*protected void writeStreamHeader() throws IOException {
+            	protected void writeStreamHeader() throws IOException {
                    
                     reset();
-                } */
+                } 
                
             };
            

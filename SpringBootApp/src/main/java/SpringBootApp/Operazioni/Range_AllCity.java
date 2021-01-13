@@ -7,7 +7,7 @@ import GestioneDati.*;
  * Classe Range_AllCity si occupa della gestione del range scelto dall'utente relativa
  * a tutte le città.
  * 
- * @author Andrea Tassi & Stefano Martelli
+ * @author Andrea Tassi e Stefano Martelli.
  *
  */
 
@@ -30,7 +30,7 @@ public class Range_AllCity {
 	private int PosMassimaVarianza;
 	
 	/**
-	 * Costruttore si inizializzano in vettore "citta" <String>
+	 * Costruttore si inizializzano in vettore "citta" di tipo String.
 	 * 
 	 */
 	

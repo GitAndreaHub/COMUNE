@@ -47,7 +47,7 @@ public class Main {
 	 * Metodo RitornoDatiActualy che richiamando la classe "GestioneDatiActualy" inserisce tutti i dati in 
 	 * un JSONObject.
 	 * 
-	 * @param nome Nme della citta.
+	 * @param nome Nome della citta.
 	 * @return Dati JSONObject con all'interno i dati metereologici giornalieri.
 	 */
 	

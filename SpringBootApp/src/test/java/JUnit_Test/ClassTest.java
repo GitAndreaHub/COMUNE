@@ -3,9 +3,6 @@ package JUnit_Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 import java.util.Vector;
-
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import RaccoltaDati.*;
@@ -15,7 +12,7 @@ import SpringBootApp.Operazioni.Range_AllCity;
 /**
  * Classe JUnit Test.
  * 
- * @author Andrea Tassi
+ * @author Andrea Tassi.
  * 
  * 
  */

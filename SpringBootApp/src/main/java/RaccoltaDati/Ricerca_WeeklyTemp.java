@@ -1,6 +1,5 @@
 package RaccoltaDati;
 
-import java.util.Arrays;
 import java.util.Scanner;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
@@ -29,10 +28,7 @@ public class Ricerca_WeeklyTemp extends RaccoltaDati {
 	
 	
 	/**
-	 * Costruttore che prende in ingresso il vettore "dati" di tipo Double, 
-	 * definito come "Dati".
-	 *  
-	 * @param Dati Vettore con dati di tipo Double
+	 * Costruttore vuoto.
 	 * 
 	 */
 	public Ricerca_WeeklyTemp() {

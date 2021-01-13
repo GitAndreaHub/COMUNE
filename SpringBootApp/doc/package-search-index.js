@@ -1,0 +1,1 @@
+packageSearchIndex = [{"l":"All Packages","url":"allpackages-index.html"},{"l":"GestioneDati"},{"l":"JUnit_Test"},{"l":"Progetto.Esame.SpringBootApp"},{"l":"RaccoltaDati"},{"l":"SpringBootApp"},{"l":"SpringBootApp.Controller"},{"l":"SpringBootApp.Operazioni"}]

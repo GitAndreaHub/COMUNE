@@ -9,6 +9,13 @@ import org.springframework.scheduling.annotation.Scheduled;
 
 import SpringBootApp.Operazioni.GestioneScrittura_JSON;
 
+/**
+ * Classe SpringBootAppApplication.
+ * 
+ * @author Andrea Tassi.
+ *
+ */
+
 @SpringBootApplication
 public class SpringBootAppApplication {
 
@@ -17,7 +24,14 @@ public class SpringBootAppApplication {
 		
 	}
 	
-	@Scheduled(fixedRate = 20000)
+	/**
+	 * 
+	 * Metodo TempAttuale si occupa di far partire il salvataggio dei dati giornalieri, riguardo tutte 
+	 * le citta, ogni ora.
+	 * 
+	 */
+	
+	@Scheduled(fixedRate = 3600000)
 	void TempAttuale() {
 		
 		GestioneScrittura_JSON write = new GestioneScrittura_JSON();
@@ -27,6 +41,11 @@ public class SpringBootAppApplication {
 	} 
 
 }
+
+/**
+ * Configurazione dello Scheduled.
+ * 
+ */
 
 @Configuration
 @EnableScheduling

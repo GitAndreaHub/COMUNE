@@ -12,9 +12,7 @@ public abstract class RaccoltaDati {
 	
 	
 	/**
-	 * Costruttore per inizializzare il vettore che conterrà i dati richiesti.
-	 * 
-	 * @param Dati Vettore con dati di tipo Double
+	 * Costruttore vuoto.
 	 */
 	public RaccoltaDati() {
 		

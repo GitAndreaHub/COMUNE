@@ -35,10 +35,7 @@ public class ChiamataAPI_Actualy extends RaccoltaDati{
 	Vector<Double> dati = new Vector<Double>();
 	
 	/**
-	 * Costruttore che prende in ingresso il vettore "dati" di tipo Double, 
-	 * presente nella classe astratta RaccoltaDati.
-	 * 
-	 * @param Dati Vettore di dati di tipo double
+	 * Costruttore vuoto.
 	 */
 		
 	public ChiamataAPI_Actualy() {
@@ -120,7 +117,7 @@ public class ChiamataAPI_Actualy extends RaccoltaDati{
 	 * 
 	 * Metodo GetDati.
 	 * 
-	 * @return dati vettore dati <Double>
+	 * @return dati vettore dati di tipo Double
 	 * 
 	 */
 	
