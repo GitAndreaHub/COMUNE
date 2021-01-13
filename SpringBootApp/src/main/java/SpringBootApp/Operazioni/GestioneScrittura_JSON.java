@@ -19,8 +19,8 @@ import SpringBootApp.Controller.Main;
 
 public class GestioneScrittura_JSON {
 	
-	Vector<String> citta = new Vector<String>();
-	JSONObject DatiCitta = new JSONObject();
+	private Vector<String> citta = new Vector<String>();
+	private JSONObject DatiCitta = new JSONObject();
 	
 	/**
 	 * 

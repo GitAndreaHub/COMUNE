@@ -17,11 +17,11 @@ public class Range_AllCity {
 	Media media=new Media();
 	MinMax minmax = new MinMax();
 	
-	Vector<Double> VettoreDati = new Vector<Double>();
-	Vector<Double> VettoreMedie = new Vector<Double>();
-	Vector<Double> VettoreMinimi = new Vector<Double>();
-	Vector<Double> VettoreMassimi = new Vector<Double>();
-	Vector<Double> VettoreVarianze = new Vector<Double>();
+	private Vector<Double> VettoreDati = new Vector<Double>();
+	private Vector<Double> VettoreMedie = new Vector<Double>();
+	private Vector<Double> VettoreMinimi = new Vector<Double>();
+	private Vector<Double> VettoreMassimi = new Vector<Double>();
+	private Vector<Double> VettoreVarianze = new Vector<Double>();
 	
 	private Vector<String> citta = new Vector<String>();
 	
