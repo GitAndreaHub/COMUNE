@@ -50,24 +50,14 @@ public class GestioneScrittura_JSON {
 	
 	public void Scrittura() {
 		
-		/*try {
-			
-			PrintWriter file_output = new PrintWriter(new BufferedWriter(new FileWriter("JSON_File_Write")));
-			
-			file_output.println(DatiCitta);
-			
-		} catch(IOException e) {
-			e.printStackTrace();
-		} */
-		
 		try {
 	           
-            ObjectOutputStream file_output = new ObjectOutputStream(new BufferedOutputStream(new FileOutputStream("JSON_File_Write.json"))) {
+            ObjectOutputStream file_output = new ObjectOutputStream(new BufferedOutputStream(new FileOutputStream("JSON_File_Write.json", true))) {
                 
-            	/*protected void writeStreamHeader() throws IOException {
+            	protected void writeStreamHeader() throws IOException {
                    
                     reset();
-                }*/
+                }
                
             };
            
