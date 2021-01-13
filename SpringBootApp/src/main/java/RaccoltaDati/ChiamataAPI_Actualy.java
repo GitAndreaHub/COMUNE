@@ -32,7 +32,7 @@ public class ChiamataAPI_Actualy extends RaccoltaDati{
 	private Long temp_minLong;
 	
 	RicercaID ID = new RicercaID();
-	Vector<Double> dati = new Vector<Double>();
+	private Vector<Double> dati = new Vector<Double>();
 	
 	/**
 	 * Costruttore vuoto.

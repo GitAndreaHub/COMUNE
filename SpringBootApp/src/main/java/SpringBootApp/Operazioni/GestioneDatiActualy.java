@@ -16,7 +16,7 @@ public class GestioneDatiActualy {
 	private double Min;
 	private double Max;
 	private double Varianza;
-	Vector<Double> appoggio=new Vector<Double>();
+	private Vector<Double> appoggio=new Vector<Double>();
 	
 	
 	/**

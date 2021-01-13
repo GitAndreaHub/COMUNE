@@ -9,8 +9,6 @@ import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
 
-import java.util.Vector;
-
 /**
  * Classe Ricerca_WeeklyTemp che ricerca i dati meteo relativi a un certo arco di tempo
  * all'interno di un file .json.
@@ -24,7 +22,6 @@ public class Ricerca_WeeklyTemp extends RaccoltaDati {
 	
 	
 	private Double appoggio;
-	protected Vector<Double> temp = new Vector<Double>();
 	
 	
 	/**
