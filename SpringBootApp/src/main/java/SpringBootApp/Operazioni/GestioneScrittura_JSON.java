@@ -20,7 +20,6 @@ import SpringBootApp.Controller.Main;
 public class GestioneScrittura_JSON {
 	
 	Vector<String> citta = new Vector<String>();
-	Vector<Double> DATI = new Vector<Double>();
 	JSONObject DatiCitta = new JSONObject();
 	
 	/**
