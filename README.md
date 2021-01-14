@@ -48,6 +48,9 @@ Dopo che il programma viene avviato, ogni ora ci sarà una scrittura dei dati at
 
 ## Funzionamento
 Il lavoro è stato diviso in 3 grandi macro aree, cioè la raccolta dei dati, la lavorazione di essi e la gestione dello Spring; Di conseguenza avremo 3 packages principali:
+
+![Case Diagram](https://imagizer.imageshack.com/img922/8631/bRcwNQ.jpg)
+
  1. `RaccoltaDati`: In _**"RaccoltaDati"**_ ci sono le classi che attingono i dati, da una chiamata API o da un file JSON, pronti per essere inseriti dentro dei vettori per poi essere lavorati;
 
  ![RaccoltaDati](https://imagizer.imageshack.com/img923/4843/cBVwYL.jpg)
