@@ -39,7 +39,7 @@ Tipo | Rotta | Parametri/Body | Return
 Appena fatta richiesta tramite il Client, verranno riportati i dati richiesti tramite formato JSON, e ciò che verrà inserito dentro al file viene stampanto in console per una quesione di praticità e comodità.
 
 
-Dopo che il programma viene avviato, ogni ora ci sarà una scrittura dei dati attuali di tutte le città su un file chiamato "Dati_Giornalieri", presente nella cartella del progetto.
+Dopo che il programma viene avviato, ogni ora ci sarà una scrittura dei dati attuali di tutte le città su un file chiamato "Dati_giornalieri.JSON", presente nella cartella del progetto.
 
 ### Use Case Diagram
 ![Casi D'uso](https://imagizer.imageshack.com/img924/2258/2S6Sms.jpg)
