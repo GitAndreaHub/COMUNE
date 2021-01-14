@@ -31,24 +31,43 @@ Tipo | Rotta | Parametri/Body | Return
 ------------ | ------------- | ------------ | -------------
 `GET` | /actualy | "nome" | Temperatura attuale. temperatura massima, minima e varianza massima del giorno odierno
 `POST` | /singolo_giorno_casuale | "n1" - "nome"| Temperatura media del giorno scelto
-`POST` | /range_personalizzabile_singolo | "n1" - "n2" - "nome" | Temperatura media, massima, minima e varianza 
-`POST` | /range_personalizzabile_totale | "n1" - "n2" | Temperatura media, massima, minima e varianza ma di tutte le città
+`POST` | /range_personalizzabile_singolo | "n1" - "n2" - "nome" | Temperatura media, massima, minima e varianza di una città, non attuali 
+`POST` | /range_personalizzabile_totale | "n1" - "n2" | Temperatura media, massima, minima e varianza ma di tutte le città, non attuali
 
 > Per "nome" si intende il nome della città, per "n1" e "n2" invece si intende il range dei giorni richiesti(ad eccezione di "/singolo_giorno_casuale" che si utilizza solo "n1")
 
 Appena fatta richiesta tramite il Client, verranno riportati i dati richiesti tramite formato JSON.
 Quando si utilizza la chiamata "/actualy", ogni ora ci sarà una scrittura dei dati attuali di tutte le città su un file chiamato "Dati_Giornalieri", presente nella cartella del progetto.
 
-
-
-## Funzionamento
-
-
-
-
-
 ### Use Case Diagram
-
 ![Casi D'uso](https://imagizer.imageshack.com/img924/2258/2S6Sms.jpg)
 
 
+
+## Funzionamento
+Il lavoro è stato diviso in 3 grandi macro aree, cioè la raccolta dei dati, la lavorazione di essi e la gestione dello Spring; Di conseguenza avremo 3 packages principali:
+ 1. "RaccoltaDati";
+ 
+ ![RaccoltaDati](https://imagizer.imageshack.com/img923/4843/cBVwYL.jpg)
+ 
+ 2. "GestioneDati";
+ 
+ ![GestioneDati](https://imagizer.imageshack.com/img924/828/NJIiIF.jpg)
+ 
+ 3. "SpringBootApp"(con all'interno i packages "Operazioni", "Controller" e la classe "SpringBootAppApplication").
+ 
+ ![SpringBootApp](https://imagizer.imageshack.com/img924/9144/ymLY9E.jpg)
+ 
+ 
+ 
+
+
+
+
+
+
+
+## Autori e divisione lavoro
+
+[_**Andrea Tassi**_](https://github.com/GitAndreaHub): 50%.
+[_**Stefano Martelli**_](https://github.com/Martelli00): 50%.
