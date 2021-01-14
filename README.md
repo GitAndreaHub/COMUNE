@@ -36,10 +36,10 @@ Tipo | Rotta | Parametri/Body | Return
 
 > Per "nome" si intende il nome della città, per "n1" e "n2" invece si intende il range dei giorni richiesti(ad eccezione di "/singolo_giorno_casuale" che si utilizza solo "n1")
 
-Appena fatta richiesta tramite il Client, verranno riportati i dati richiesti tramite formato JSON, e ciò che verrà inserito dentro al file viene stampanto in console per una quesione di praticità e comodità.
+Appena fatta richiesta tramite il Client, verranno riportati i dati richiesti tramite formato JSON.
 
 
-Dopo che il programma viene avviato, ogni ora ci sarà una scrittura dei dati attuali di tutte le città su un file chiamato "Dati_giornalieri.JSON", presente nella cartella del progetto.
+Dopo che il programma viene avviato, ogni ora ci sarà una scrittura dei dati attuali di tutte le città su un file chiamato "Dati_giornalieri.JSON", presente nella cartella del progetto, e ciò che verrà inserito dentro al file viene stampanto in console per una quesione di praticità e comodità.
 
 ### Use Case Diagram
 ![Casi D'uso](https://imagizer.imageshack.com/img924/2258/2S6Sms.jpg)
