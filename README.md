@@ -46,23 +46,20 @@ Quando si utilizza la chiamata "/actualy", ogni ora ci sarà una scrittura dei d
 
 ## Funzionamento
 Il lavoro è stato diviso in 3 grandi macro aree, cioè la raccolta dei dati, la lavorazione di essi e la gestione dello Spring; Di conseguenza avremo 3 packages principali:
- 1. "RaccoltaDati";
- 
+ 1. `RaccoltaDati`: In _**"RaccoltaDati"**_ ci sono le classi che attingono i dati, da una chiamata API o da un file JSON, pronti per essere inseriti dentro dei vettori per poi essere lavorati;
+
  ![RaccoltaDati](https://imagizer.imageshack.com/img923/4843/cBVwYL.jpg)
  
- 2. "GestioneDati";
+ 2. `GestioneDati`:  In _**"GestioneDati"**_ sono presenti le classi che ci permettono di svolgere calcoli su vettori;
  
  ![GestioneDati](https://imagizer.imageshack.com/img924/828/NJIiIF.jpg)
  
- 3. "SpringBootApp"(con all'interno i packages "Operazioni", "Controller" e la classe "SpringBootAppApplication").
- 
+ 3. `SpringBootApp`: Qui invece abbiamo due sotto packages(e la classe di avvio di Spring fuori da essi), cioè "Operazioni",che presenta al suo interno classi che prendono i vettori con i dati e creano le statistiche desiderate e la classe per la scrittura sul un file JSON, e "Controller", con internamente la classe "Main" che raccoglie i dati e statistiche manipolate, li inserisce in dei JSONObjects e li manda nell'altra classe di questo sotto-Package "SimpleRestController", che collega tutto a Spring.
+  
  ![SpringBootApp](https://imagizer.imageshack.com/img924/9144/ymLY9E.jpg)
  
- 
- 
 
-
-
+Nel progetto abbiamo anche implementanto JavaDOC(con JavaDOC in HTML) ed una classe di JUnit Test che ci ha permesso di testare il funzionamento di varie classi. Il JavaDoc in HTML è presente nella cartella "doc" e la classe di Test si trova nella cartella "src/test/Java" nel package "JUnit_Test".
 
 
 
