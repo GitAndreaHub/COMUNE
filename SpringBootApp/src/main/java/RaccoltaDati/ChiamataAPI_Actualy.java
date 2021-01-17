@@ -67,7 +67,6 @@ public class ChiamataAPI_Actualy extends RaccoltaDati{
 		
 			BufferedReader input = new BufferedReader(new InputStreamReader(link.getInputStream()));
 			
-			//JSONObject temp = null;
 			String inputLine;
 			while((inputLine = input.readLine()) != null) {
 			
