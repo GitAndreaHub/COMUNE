@@ -36,6 +36,18 @@ Tipo | Rotta | Parametri/Body | Return
 
 > Per "nome" si intende il nome della città, per "n1" e "n2" invece si intende il range dei giorni richiesti(ad eccezione di "/singolo_giorno_casuale" che si utilizza solo "n1")
 
+> I nomi delle città devono essere scritti come riportati nella lista precedente.
+
+> Avendo i JSONObjects un ordine casuale, per semplificare la lettura a schermo dei dati nell'ultima chiamata riportata in tabella, abbiamo inserito dei numeri antecedenti al dato. L'ordine è:
+> * 1-
+> * 2-
+> * 2--
+> * 3-
+> * 3--
+> * 4-
+> * 4--
+
+
 Appena fatta richiesta tramite il Client, verranno riportati i dati richiesti tramite formato JSON.
 
 
